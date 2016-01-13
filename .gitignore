@@ -1,6 +1,8 @@
 # Logs
 logs
 *.log
+.sublime-project
+.sublime-workspace
 
 # Runtime data
 pids
