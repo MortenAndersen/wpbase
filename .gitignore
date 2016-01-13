@@ -3,7 +3,7 @@ logs
 *.log
 .sublime-project
 .sublime-workspace
-.sass-cache/*
+sass-cache
 # Runtime data
 pids
 *.pid

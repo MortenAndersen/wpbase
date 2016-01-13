@@ -1,0 +1,46 @@
+.gallery {
+	display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 2em;
+
+}
+.gallery-item {
+	flex: 1 auto 0;
+	padding: .25em;
+	.gallery-columns-1 & {
+		width: calc(100% / 1);
+	}
+	.gallery-columns-2 & {
+		width: calc(100% / 2);
+	}
+	.gallery-columns-3 & {
+		width: calc(100% / 3);
+	}
+	.gallery-columns-4 & {
+		width: calc(100% / 4);
+	}
+	.gallery-columns-5 & {
+		width: calc(100% / 5);
+	}
+	.gallery-columns-6 & {
+		width: calc(100% / 6);
+	}
+	.gallery-columns-7 & {
+		width: calc(100% / 7);
+	}
+	.gallery-columns-8 & {
+		width: calc(100% / 8);
+	}
+	.gallery-columns-9 & {
+		width: calc(100% / 9);
+	}
+	@include phone {
+            width: 50% !important;
+            	img {
+            		width: 100%;
+            	}
+        }
+}

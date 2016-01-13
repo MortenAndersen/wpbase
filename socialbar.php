@@ -1,0 +1,3 @@
+<div class="social__icons">
+<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" rel="nofollow" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.svg">Facebook</a> <a href="https://twitter.com/intent/tweet?original_referer=&text=<?php the_title(); ?>&url=<?php the_permalink();?>" rel="nofollow" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/twitter.svg">Twitter</a>
+</div>

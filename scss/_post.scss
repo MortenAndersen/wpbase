@@ -1,0 +1,12 @@
+.post {
+    border-bottom: $border;
+    overflow: hidden;
+    img {
+    	float: right;
+    	margin: 0 0 1em 2em;
+    	@include phone {
+    		margin: 0 0 1em 0;
+    		width: 100%;
+    	}
+    }
+}

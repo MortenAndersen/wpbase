@@ -1,0 +1,24 @@
+.comment-author {
+	.avatar {
+		float: left;
+		margin: 0 2em 0 0;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+.comment-metadata {
+	a {
+		text-decoration: none;
+	}
+	.comment-edit-link {
+		color: red;
+		font-size: .8em;
+	}
+}
+.reply {
+	padding-bottom: 1em;
+	a {
+		color: #105f79;
+	}
+}

@@ -1,0 +1,271 @@
+body {
+    background: $body-bg-color;
+    font-size: 1em;
+    line-height: 1.4;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $body-txt-color;
+}
+
+
+/*
+ * Logo & Description
+ */
+
+
+
+.logo-widget > * {
+    vertical-align: middle;
+}
+
+.logo {
+    display: inline-block;
+        @include phone {
+            display: block;
+        }
+        img {
+            @include phone {
+            max-width: 75%
+        }
+        }
+}
+
+
+/*
+ * Header
+ */
+
+body > header {
+    @extend .page-width;
+    clear: both;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include phone {
+        background: rgba(0,0,0,0.1);
+        width: 100%;
+        padding: 1em;
+    }
+
+}
+
+.stack {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    padding: 1em 0 0 0;
+}
+.content__right {
+        > * {
+            float: right;
+        }
+    }
+
+
+/*
+ * Main (Wrapper)
+ */
+
+.page-wrap {
+    @extend .page-width;
+    padding: 2em 0;
+    overflow: hidden;
+    @include phone {
+        padding: 0;
+    }
+}
+.footer-wrap {
+    @extend .page-width;
+}
+
+
+/*
+ * Article
+ */
+
+article {
+    width: 100%;
+    float: left;
+    .page-template-page-aside & {
+        width: 100% - $aside-first - $aside-last;
+    }
+    .page-template-page-aside-left &{
+        width: 100% - $aside-first;
+    }
+    .page-template-page-aside-right &,
+    .single &,
+    .archive &,
+    .blog & {
+        width: 100% - $aside-last;
+    }
+}
+
+
+/*
+ * Aside
+ */
+
+aside {
+    float: left;
+    padding: 0;
+    &.first {
+        width: $aside-first;
+        padding-right: 2em;
+         @include tablet {
+            padding-right: 1em;
+        }
+        @include phone {
+            display: none;
+        }
+    }
+    &.last {
+        width: $aside-last;
+        padding-left: 2em;
+             @include tablet {
+                padding-left: 1em;
+            }
+        .single &,
+        .archive &,
+        .blog & {
+            min-height: 2em;
+            @include phone {
+                min-height: inherit;
+            }
+        }
+    }
+}
+
+@include phone {
+    article,
+    aside {
+        width: 100% !important;
+        float: none !important;
+        padding: 0 !important;
+    }
+}
+
+
+/*
+ * Aside > Sections
+ */
+
+aside > section {
+    padding-bottom: 2em;
+}
+
+
+/*
+ * Footer
+ */
+
+body > footer {
+    clear: both;
+    overflow: hidden;
+    background: #083342;
+    color: #fff;
+    padding: 2em 0;
+    font-size: .9em;
+    @include phone {
+        padding: 1em 0;
+        font-size: inherit;
+    }
+}
+
+/*
+ * Content Header
+ */
+
+ .content__header{
+    clear: both;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+ }
+ .title__content {
+    overflow: hidden;
+    min-height: 85px;
+    border-bottom: $border;
+    margin-bottom: 1em;
+    @include phone {
+        min-height: inherit;
+    }
+ }
+
+/* Flex GRID */
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    overflow: hidden;
+    clear: both;
+    @include phone {
+        display: block;
+    }
+    .item {
+        flex: 1;
+        margin-left: 2em;
+        padding: 1em;
+        overflow: hidden;
+        &:first-child {
+            margin-left: 0;
+        }
+        footer & {
+            padding: 0;
+            margin-right: 2em;
+            @include phone {
+                margin-right: 0;
+                padding: 0 0 2em 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @include phone {
+            padding: 0 0 1em 0;
+            margin: 0;
+            max-width: inherit !important;
+            min-width: inherit !important;
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .header-design-item,
+    .footer-design-item {
+        flex: 1 0 auto;
+        margin: 0;
+        @include phone {
+            width: 100% !important;
+        }
+    }
+   &.pre-footer {
+        .item {
+            padding: 0;
+            img {
+                @include phone {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+article .flex {
+    padding-bottom: 2em;
+    .item {
+        padding: 0;
+    }
+}
+
+
+/* Comment */
+
+.commentlist {
+    @extend .nul;
+    li {
+        @extend .nul;
+    }
+}

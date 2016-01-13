@@ -1,0 +1,27 @@
+.footer__menu {
+	background: rgba(0,0,0,.2);
+	overflow: hidden;
+	padding: 1em 0;
+	margin-top: 2em;
+	ul {
+		@extend .page-width;
+	}
+	li {
+		float: left;
+		margin-right: 2em;
+		@include phone {
+			float: none;
+			margin: 0 0 1em 0;
+			border-bottom: 1px solid rgba(255,255,255,.1);
+			padding: 0 0 1em 0;
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+	a {
+		display: block;
+	}
+}

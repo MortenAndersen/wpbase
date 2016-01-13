@@ -1,0 +1,149 @@
+nav.drop__down{
+	&::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	@include phone {
+		display: none;
+		width: 100%;
+		font-weight: 800;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		margin: 0;
+		padding:0;
+		list-style-type: none;
+		position: relative;
+		float: left;
+		transition: .3s all;
+		@include phone {
+			float: none;
+		}
+	}
+	a {
+		text-decoration: none;
+		display:block;
+		padding: 1em 2em;
+		color: #fff;
+		@include phone {
+			border-bottom: 1px solid rgba(255,255,255,.7);
+			background-image: linear-gradient(transparent, rgba(0,0,0,.2));
+		}
+	}
+}
+
+
+nav.drop__down ul li.active,
+nav.drop__down ul li:hover
+{
+	background:rgba(0,0,0,.2);
+}
+
+nav.drop__down li:hover a,
+nav.drop__down .active a {
+
+}
+
+nav.drop__down li:hover li a,
+nav.drop__down .active li a {
+color: #fff;
+}
+
+nav.drop__down ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background: rgba(16, 95, 121,.9);
+	padding:0;
+	z-index: 100000;
+	box-shadow: 0 3px 6px -3px #000;
+	@include phone {
+		display: block;
+		position: relative;
+		box-shadow: none;
+	}
+}
+
+nav.drop__down ul ul li
+{
+	float:none;
+	min-width:10em;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	@include phone {
+		width: 100%;
+	}
+}
+
+nav.drop__down ul ul a
+{
+	line-height:120%;
+	padding:10px 15px;
+		@include phone {
+			padding: 1em 0 1em 4em;
+		}
+}
+
+nav.drop__down ul ul ul a {
+	@include phone {
+			padding: 1em 0 1em 6em;
+		}
+}
+
+nav.drop__down ul ul ul
+{
+	top:0;
+	left:100%;
+	@include phone {
+		left: 0;
+	}
+}
+
+nav.drop__down ul li:hover > ul
+{
+	display:block;
+}
+.top__menu__bar {
+	width: 100%;
+	background-color: rgb(16, 95, 121);
+	clear: both;
+	nav {
+		@extend .page-width;
+	}
+}
+li li.menu-item-has-children > a:after {
+	content: "\25b8";
+	float: right;
+	@include phone {
+		display: none;
+	}
+}
+/* MoblieMenu Icon */
+.menu__icon {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 100000;
+	display: none;
+	@include phone {
+		display: block;
+	}
+}
+
+.icon-bar {
+	display: block;
+	width: 25px;
+	height: 4px;
+	background-color: rgba(0,0,0,.8);
+	border-radius: 1px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	margin-top: 3px;
+	cursor: pointer;
+		&.mobile-menu-active {
+		}
+}

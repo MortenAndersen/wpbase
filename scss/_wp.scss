@@ -1,0 +1,122 @@
+.wp-caption {
+    font-size: small;
+}
+
+.wp-caption-text {
+    font-size: small;
+}
+
+.sticky {
+    display: block;
+}
+
+.gallery-caption {
+    font-size: small;
+}
+
+.bypostauthor {
+    font-weight: bold;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 1em 2em;
+        padding: .5em;
+        border: 1px solid rgba(0,0,0,.05);
+}
+
+.alignleft {
+    float: left;
+    margin: 0 2em 1em 0;
+
+        padding: .5em;
+        border: 1px solid rgba(0,0,0,.05);
+}
+
+.aligncenter {
+    text-align: center;
+        padding: .5em;
+        border: 1px solid rgba(0,0,0,.05);
+}
+.no-border {
+    border: none !important;
+    padding: 0 !important;
+}
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+#respond {
+    clear: both;
+    border-top: $border;
+    border-bottom: $border;
+}
+
+#commentform {
+    max-width: 30em;
+}
+
+section,
+.item {
+    float: left;
+    width: 100%;
+    padding-bottom: 2em;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    li a {
+        text-decoration: none;
+        padding: .3rem;
+        border-bottom: 1px solid $color1;
+        display: block;
+        &:hover {
+            text-decoration: underline;
+            footer & {
+                text-decoration: none;
+            }
+        }
+        footer & {
+            border-color: rgba(255, 255, 255, .1);
+        }
+    }
+    #recentcomments {
+        padding-top: .4rem;
+    }
+    fieldset {
+        margin: 0 0 1em 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+.pagination {
+    overflow: hidden;
+    padding: 1em 0 0 0;
+    line-height: 1;
+}
+
+.page-numbers {
+    padding: .25em .5em;
+    border: 1px solid rgba(0, 0, 0, .05);
+    float: left;
+    margin-right: .25em;
+    &.current,
+    &:hover {
+        background: rgba(0, 0, 0, .05);
+    }
+}
+
+.embedded__content {
+    margin: 0 0 2em 0;
+}

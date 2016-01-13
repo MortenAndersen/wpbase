@@ -1,0 +1,63 @@
+.bar {
+    display: none;
+    border-top: 1px solid rgba(255, 255, 255, .85);
+    background-image: linear-gradient(#105f79, #14799A);
+    padding: 0;
+    font-size: .9em;
+    color: #fff;
+    .item {
+        border-radius: 3px;
+    }
+    .page-wrap {
+        padding: 2em 0;
+    }
+}
+
+.bar__icon {
+    float: right;
+    cursor: pointer;
+}
+
+.info {
+    fill: #AB7923;
+    transition: .5s all;
+}
+
+.bar-svg {
+    width: 40px;
+    height: 40px;
+    &:hover {
+        .info {
+            fill: #D89118;
+        }
+    }
+}
+
+nav.drop__down li.but-menu {
+    position: absolute;
+    background-color: #105f79;
+    color: #fff;
+    margin: -2em 0 0 0;
+    right: 2em;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1em;
+    border-radius: .5em .5em 0 0;
+    cursor: pointer;
+    &:hover {
+        background: #D89118;
+    }
+}
+
+.but-menu-mobile {
+    cursor: pointer;
+    text-align: right;
+    background-color: rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.1);
+    padding: .5em 1em;
+    margin-top: 1em;
+    display: none;
+    @include phone {
+        display: block;
+    }
+}

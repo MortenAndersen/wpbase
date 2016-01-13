@@ -1,0 +1,55 @@
+ul.banner{
+	margin: 0;
+	padding: 0;
+		li{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			overflow: hidden;
+			display: none;
+			&:first-child {
+				display: block;
+			}
+		}
+}
+section.banner__content {
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 1px 0 0 0;
+	position: relative;
+	//box-shadow: 0 5px 4px -4px rgba(0,0,0,.5);
+	img {
+		width: 100%;
+		float: left;
+	}
+	a {
+		padding: 0;
+		border: none;
+		&:hover .banner__text {
+			color: #ddd;
+		}
+	}
+	figure {
+		margin: 0;
+	}
+}
+
+.banner__text {
+	background: rgba(140, 112, 23, 0.9);
+	border-top: 1px solid rgba(255,255,255,.5);
+	color: #fff;
+	padding: 1em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: .9em;
+	h4 {
+		margin: 0;
+		color: inherit;
+	}
+	@include phone {
+		display: none;
+	}
+}
