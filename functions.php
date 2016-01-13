@@ -487,7 +487,7 @@ add_action( 'widgets_init', function(){
 });
 
 
-/* --------------------- ACF social Widget ----------------------------------------- */
+/* -------------------------------------------------------------- */
 
 if( class_exists('acf') ) {
 
@@ -517,6 +517,10 @@ parent::__construct(
 	}
 }
 
+
+
+
+
 add_action( 'widgets_init', function(){
      register_widget( 'hjemmesider_acf_social_widget' );
 });
@@ -524,7 +528,8 @@ add_action( 'widgets_init', function(){
 }
 
 
-/* ---------------------- ACF Theme Admin ------------------------------------------------- */
+
+/* ----------------------------------------------------------------------- */
 
 
 if( function_exists('acf_add_options_page') ) {
@@ -545,6 +550,5 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-/* ---------------------- ACF social felter ------------------------------------------------- */
 
 require_once('includes/acf-social.php');
