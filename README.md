@@ -1,0 +1,2 @@
+# wpbase
+WordPress theme
