@@ -120,3 +120,18 @@ section,
 .embedded__content {
     margin: 0 0 2em 0;
 }
+
+#loginform {
+    max-width: 300px;
+    footer &, .bar & {
+        max-width: inherit;
+    }
+    label {
+        padding-bottom: .25em;
+        display: block;
+    }
+    input{
+        background-color: inherit;
+        border-color: rgba(0,0,0,.4);
+    }
+}

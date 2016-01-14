@@ -8,14 +8,11 @@
 	a {
 		text-decoration: none;
 		float: left;
-		padding: 0 1em 0 0;
-		border: 1px solid rgba(0,0,0,.1);
+		font-weight: 600;
 		margin: 0 0 0 .5em;
-		background: linear-gradient(#fff, #f2f2f2);
-		border-radius: 0 5px 5px 0;
 		&:hover {
 			img {
-				background: #B0D8DC;
+				transform: scale(.9);
 			}
 		}
 	}
@@ -23,6 +20,6 @@
 		float: left;
 		margin-right: .25em;
 		background-color: #fff;
-		transition: .5s all;
+		transition: .1s all;
 	}
 }
