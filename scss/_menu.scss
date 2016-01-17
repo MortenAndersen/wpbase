@@ -1,72 +1,73 @@
-nav{
-	background: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.1));
-	border: 1px solid rgba(0,0,0,.04);
-	overflow: hidden;
-	ul {
-		margin: 0;
-		padding: 0;
-		//display: flex;
-		//flex-wrap: wrap;
-    //justify-content: flex-start;
-	}
-	li{
-		margin: 0;
-		padding:0;
-		list-style-type: none;
-		float: left;
-		&:last-child{
-			a{
-				border-right: none;
-			}
-		}
-	}
-	a{
-		text-decoration: none;
-		padding: 1em 2em;
-		display: block;
-		border-right: 1px solid rgba(255,255,255,.8);
-		font-weight: bold;
-		&:hover {
-			background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2));
-		}
-	}
-	ul ul {
-		display: none;
-	}
-	@include phone {
-		display: none;
-		li {
-			float: none;
-		}
-		a{
-			border-right: none;
-			border-bottom: 1px solid rgba(255,255,255,.8);
-			padding: 1em;
-		}
-	}
+nav {
+    background: linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .1));
+    border: 1px solid rgba(0, 0, 0, .04);
+    overflow: hidden;
+    ul {
+        margin: 0;
+        padding: 0;
+        //display: flex;
+        //flex-wrap: wrap;
+        //justify-content: flex-start;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: left;
+        &:last-child {
+            a {
+                border-right: none;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        padding: 1em 2em;
+        display: block;
+        border-right: 1px solid rgba(255, 255, 255, .8);
+        font-weight: bold;
+        &:hover {
+            background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .2));
+        }
+    }
+    ul ul {
+        display: none;
+    }
+    @include phone {
+        display: none;
+        li {
+            float: none;
+        }
+        a {
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .8);
+            padding: 1em;
+        }
+    }
 }
 
+
 /* MoblieMenu Icon */
+
 .menu__icon {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	z-index: 100000;
-	display: none;
-	@include phone {
-		display: block;
-	}
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100000;
+    display: none;
+    @include phone {
+        display: block;
+    }
 }
 
 .icon-bar {
-	display: block;
-	width: 25px;
-	height: 4px;
-	background-color: rgba(0,0,0,.8);
-	border-radius: 1px;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-	margin-top: 3px;
-	cursor: pointer;
-		&.mobile-menu-active {
-		}
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 3px;
+    cursor: pointer;
+    &.mobile-menu-active {}
 }

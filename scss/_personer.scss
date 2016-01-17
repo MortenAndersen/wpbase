@@ -1,0 +1,54 @@
+.personer {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    overflow: hidden;
+    clear: both;
+    li {
+        flex: 1 0 auto;
+        width: 22%;
+        max-width: 22%;
+        overflow: hidden;
+        margin-left: 4%;
+        padding-bottom: 1em;
+        &:nth-child(4n+1) {
+            margin-left: 0;
+        }
+        @include phone {
+            width: 49%;
+            max-width: 49%;
+            margin-left: 2%;
+            &:nth-child(2n+1) {
+                margin-left: 0;
+            }
+        }
+        .page-template-page-aside & {
+            width: 30%;
+            max-width: 30%;
+            margin-left: 5%;
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+            @include phone {
+                width: 49%;
+                max-width: 49%;
+                margin-left: 2%;
+                &:nth-child(3n+1) {
+                    margin-left: 2%;
+                }
+                &:nth-child(2n+1) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    h4 {
+        margin: 0 0 .25em 0;
+        clear: both;
+    }
+    img {
+        float: left;
+        margin: 0 0 1em 0;
+        width: 100%;
+    }
+}
