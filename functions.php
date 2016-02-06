@@ -445,3 +445,35 @@ if (function_exists('acf_add_options_page')) {
 /* ---------------------- ACF social felter ------------------------------------------------- */
 
 require_once ('includes/acf-social.php');
+
+/* ---------------------- WooCommerce ------------------------------------------------- */
+
+require_once ('includes/woo-wpbase.php');
+
+
+
+
+
+
+function modify_contact_methods($profile_fields) {
+
+    // Add new fields
+    $profile_fields['twitter'] = 'Twitter Username';
+    $profile_fields['facebook'] = 'Facebook URL';
+    $profile_fields['gplus'] = 'Google+ URL';
+
+    // Remove old fields
+    unset($profile_fields['aim']);
+
+    return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
+
+
+
+
+add_action('admin_head', 'my_custom_fonts');
+
+function my_custom_fonts() {
+  echo '<link rel="stylesheet" href="' . get_template_directory_uri() .'/css/admin-style.css" type="text/css" media="all" />';
+}

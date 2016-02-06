@@ -99,6 +99,10 @@ article {
     .blog & {
         width: 100% - $aside-last;
     }
+    .archive.woocommerce & {
+        width: 100%;
+    }
+
 }
 
 
