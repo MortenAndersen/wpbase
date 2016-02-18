@@ -1,19 +1,11 @@
 <div class="woo__wpbase__bar">
-<a href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo WC()->cart->get_cart_total(); ?> - <?php echo sprintf (_n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
-<a href="<?php echo WC()->cart->get_checkout_url(); ?>">Checkout</a>
+<img src="<?php echo get_template_directory_uri(); ?>/img/cart.svg" alt="Cart" />
+<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> | <?php echo WC()->cart->get_cart_total(); ?></a>
 
-
-<?php
-
-$form = '<form role="search" method="get" id="searchform" action="' . esc_url( home_url( '/'  ) ) . '">
-	<div>
-		<label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
-		<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Søg produkter', 'woocommerce' ) . '" />
-		<input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search', 'woocommerce' ) .'" />
-		<input type="hidden" name="post_type" value="product" />
-	</div>
-</form>';
-
-echo $form;
+<?php global $woocommerce;
+if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) :
+	echo ' | <a href="' . $woocommerce->cart->get_checkout_url() . '" title="' . __( 'Checkout' ) . '">' . __( 'Checkout' ) . '</a> | ';
+endif;
 ?>
+<?php dynamic_sidebar( 'wpbasewoobar' ); ?>
 </div>

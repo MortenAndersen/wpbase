@@ -1,6 +1,6 @@
 .woo-but {
 	display: inline-block;
-  padding: 1em 1.5em;
+  padding: .5em 1.5em;
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -31,9 +31,28 @@
 	padding: .5em 1em;
 }
 }
+.related {
+	clear: both;
+}
+.woo-but2 {
+	display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.3em;
+  position: relative;
+  background-color: #ccc;
+  background-image: linear-gradient(to top, #144208, #278651);
+  outline: none;
+  border: none;
+  &:hover {
+  	 background-image: linear-gradient(to top, #144208, #39B26F);
+  }
+}
 
 button[type=submit],
-.button  {
+.add_to_cart_button  {
 @extend .woo-but;
 width: 100%;
 border: none;
@@ -41,39 +60,55 @@ border: none;
 .single_add_to_cart_button {
 	margin: 1em 0;
 }
-.button {
-
+button[type="submit"]:disabled {
+    background: red !important;
+}
+.reset_variations {
+	display: none !important;
+}
+td.value {
+	select {
+		width: 100%;
+	}
+}
+.product {
+	position: relative;
 }
 ul.products {
-	margin: 0;
+	margin: 0 0 0 -1%;
 	padding: 0;
 	display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  flex-wrap: wrap;
+
     overflow: hidden;
     clear: both;
+    @include phone {
+    	margin: 0;
+    }
 
 		li{
-			margin: 0 0 2% 0;
-			padding: 2%;
-			padding-bottom: 5em;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: .5em;
+			border: 1px solid #ddd;
 			list-style-type: none;
-			flex: 1 0 auto;
+			flex: 1 24%;
+			max-width: 24%;
+			margin-left: 1%;
+			margin-bottom: 10px;
 			overflow: hidden;
 			position: relative;
-			width: 32%;
-			max-width: 32%;
-			border: 1px solid rgba(0,0,0,0.05);
+			//border: 1px solid rgba(0,0,0,0.05);
 			&.product-category {
 				padding-bottom: .5%;
 			}
 			@include phone {
-				width: 100%;
+				flex: 1 100%;
 				max-width: 100%;
-				padding-bottom: 2%;
+				margin: 0 0 10px 0;
 				img{
-					width: 100%;
-				}
+					width: 100%;				}
 			}
 		}
 		a{
@@ -87,12 +122,14 @@ ul.products {
 		.button {
 			clear: both;
 			display: block;
-			position: absolute;
+			//position: absolute;
 			text-align: center;
-			bottom: 2%;
-			left: 7%;
-			right: 7%;
-			@extend .woo-but;
+			//bottom: 2%;
+			//left: 7%;
+			//right: 7%;
+			margin-top: auto;
+
+
 			@include phone {
 				position: relative;
 				left: inherit;
@@ -114,14 +151,13 @@ ul.products {
 
 }
 .related, .upsells {
+	@include phone {
+				display: none;
+			}
 	.products {
 		li{
 			width: 24%;
 			max-width: 24%;
-			@include phone {
-				width: 49%;
-				max-width: 49%;
-			}
 		}
 	}
 }
@@ -130,7 +166,7 @@ ul.products {
 		li{
 			width: 15%;
 			max-width: 15%;
-			padding: 1%;
+			padding: 10px;
 			@include phone {
 				width: 49%;
 				max-width: 49%;
@@ -140,9 +176,13 @@ ul.products {
 }
 .onsale {
 	position: absolute;
+	left: 1em;
+	top: 1em;
 	padding: 1em;
 	background: rgb(188, 177, 24);
 	color: #fff;
+	transform: rotate(-25deg);
+	border-radius: 50%;
 	.related &, .upsells & {
 		padding: .5em;
 	}
@@ -211,7 +251,10 @@ aside .product_list_widget.cart_list li {
 	clear: both;
 	padding: 0 0 1em 0;
 	font-size: .75em;
-    text-transform: uppercase;
+  teext-transform: uppercase;
+  @include phone {
+  	display: none;
+  }
 }
 .amount {
 	font-weight: bold;
@@ -257,6 +300,8 @@ aside .product_list_widget.cart_list li {
 	padding: .5em ;
 	border: 1px solid rgba(0,0,0,.05);
 	margin-bottom: 1em;
+	float: right;
+	clear: both;
 	select {
 		width: auto;
 		height: auto;
@@ -297,7 +342,7 @@ aside .product_list_widget.cart_list li {
 		margin-right: .4em;
 	}
 }
-
+.added_to_cart,
 .woocommerce-message {
 	background: rgba(0, 128, 0, 0.7);
     color: #fff;
@@ -308,6 +353,14 @@ aside .product_list_widget.cart_list li {
     a {
     	color: #fff;
     }
+    .woocommerce-cart & {
+    	position: relative;
+    	margin-bottom: .5em;
+    }
+}
+.added_to_cart {
+	top: .5em;
+	left: .5em;
 }
 .woocommerce-error {
 	border: 1px solid red;
@@ -319,6 +372,10 @@ aside .product_list_widget.cart_list li {
 	float: left;
 	width: 50%;
 	padding-right: 10%;
+	@include phone {
+		width: 100%;
+		padding: 0;
+	}
 }
 .shop__h1{
 	margin: 0;
@@ -336,9 +393,12 @@ aside .product_list_widget.cart_list li {
 	overflow: hidden;
 	line-height: 2;
 	padding: .5em 0;
-	a{
+	img {
 		float: left;
-		margin-right: 1em;
+		margin: 7px 5px 0 0;
+	}
+	a{
+		text-decoration: none;
 	}
 	form {
 		max-width: 300px;
@@ -351,5 +411,66 @@ aside .product_list_widget.cart_list li {
 	}
 	input[type=submit] {
 		display: none;
+	}
+}
+.coupon,
+.checkout_coupon {
+	max-width: 300px;
+	input {
+		width: 100%;
+		margin: 0 0 .5em 0;
+	}
+	@include phone {
+		max-width: inherit;
+	}
+}
+.showcoupon {
+	display: block;
+}
+.checkout_coupon {
+	padding: .5em 0 0 0;
+}
+.woocommerce-page thead,
+.cart-subtotal {
+	background: #105f79;
+	color: #fff;
+	text-align: left;
+}
+.woocommerce-page th {
+	text-align: left;
+}
+dl.variation {
+	margin: 0;
+	dt {
+		float: left;
+		color: #105F79;
+	}
+	dd {
+		float: left;
+		margin: 0 0 0 5px;
+	}
+}
+
+input[name=apply_coupon],
+input#place_order {
+	@extend .woo-but2;
+}
+input#place_order {
+	width: 100%;
+	font-size: 1.2em;
+}
+input[name=update_cart] {
+	float: right;
+}
+.cart_item img {
+	max-width: 12%;
+}
+
+.woo__bar__messages {
+	display: inline;
+	color: #105f79;
+	> strong,
+	> div {
+		display: inline;
 	}
 }

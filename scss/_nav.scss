@@ -11,4 +11,9 @@ nav {
 	a{
 		text-decoration: none;
 	}
+	&.woocommerce-pagination {
+		li {
+			float: left;
+		}
+	}
 }

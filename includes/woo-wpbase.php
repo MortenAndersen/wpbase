@@ -7,13 +7,36 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 add_action('woocommerce_before_main_content', 'wpbase_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'wpbase_wrapper_end', 10);
 
-add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 16;' ), 20 );
 function wpbase_wrapper_start() {
   echo '<article class="woo__wpbase">';
 }
 
 function wpbase_wrapper_end() {
   echo '</article>';
+}
+
+// Hide Coupon on cart page
+function hide_coupon_field_on_cart( $enabled ) {
+	if ( is_cart() ) {
+		$enabled = false;
+	}
+	return $enabled;
+}
+add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_cart' );
+
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	ob_start();
+	?>
+	<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> | <?php echo WC()->cart->get_cart_total(); ?></a>
+	<?php
+
+	$fragments['a.cart-contents'] = ob_get_clean();
+
+	return $fragments;
 }
 
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
@@ -45,7 +68,7 @@ $fields;
 function wpbase_woo_widgets_init() {
 
     register_sidebar(array('name' => __('WooCommerce single Left', 'wpbase_domain'), 'id' => 'wpbasewooleft', 'description' => '', 'class' => '', 'before_widget' => '<section class="woo__section">', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-
+    register_sidebar(array('name' => __('WooCommerce bar', 'wpbase_domain'), 'id' => 'wpbasewoobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="woo__bar__messages">', 'after_widget' => '</div>', 'before_title' => '<strong>', 'after_title' => '</strong>',));
 }
 add_action('widgets_init', 'wpbase_woo_widgets_init');
 

@@ -1,6 +1,5 @@
 .bar {
     display: none;
-    border-top: 1px solid rgba(255, 255, 255, .85);
     background-image: linear-gradient(#105f79, #14799A);
     padding: 0;
     font-size: .9em;
@@ -10,9 +9,6 @@
         &:first-child{
             border-left: 1px solid rgba(255,255,255,.2);
         }
-    }
-    .page-wrap {
-        padding: 2em 0;
     }
 }
 
@@ -47,6 +43,9 @@ nav.drop__down li.but-menu {
     padding: 0 1em;
     border-radius: .5em .5em 0 0;
     cursor: pointer;
+    @include phone {
+        display: none;
+    }
     &:hover {
         background: #D89118;
     }

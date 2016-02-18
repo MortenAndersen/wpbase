@@ -1,8 +1,11 @@
 .footer__menu {
 	background: rgba(0,0,0,.2);
 	overflow: hidden;
-	padding: 1em 0;
+	padding: 1em;
 	margin-top: 2em;
+		@include phone {
+			padding: 2%;
+		}
 	ul {
 		@extend .page-width;
 	}

@@ -13,6 +13,7 @@
 <body <?php body_class(); ?>>
 
 <header role="banner">
+<div class="page-wrap page-wrap-top">
 <?php
 if ( class_exists( 'WooCommerce' ) ) {
  get_template_part( 'woocommerce/wpbase/bar-cart' );
@@ -30,6 +31,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 <?php dynamic_sidebar( 'headerdesigner' ); ?>
 </div>
 <?php } ?>
+</div>
 </header>
 <?php get_template_part( 'menu-top' ); ?>
 <?php get_template_part( 'bar' ); ?>

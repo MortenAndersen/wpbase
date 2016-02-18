@@ -88,12 +88,14 @@ function wpbase_widgets_init() {
     register_sidebar(array('name' => __('Header Flex DESIGNER', 'wpbase_domain'), 'id' => 'headerdesigner', 'description' => '', 'class' => '', 'before_widget' => '<div class="header-design-item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Left', 'wpbase_domain'), 'id' => 'left', 'description' => '', 'class' => '', 'before_widget' => '<section>', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Right', 'wpbase_domain'), 'id' => 'right', 'description' => '', 'class' => '', 'before_widget' => '<section>', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Banner', 'wpbase_domain'), 'id' => 'banner', 'description' => '', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Banner', 'wpbase_domain'), 'id' => 'banner', 'description' => 'Banner i browserens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Banner inside', 'wpbase_domain'), 'id' => 'bannerinside', 'description' => 'Banner i sidens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Info bar', 'wpbase_domain'), 'id' => 'infobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('PRE Footer', 'wpbase_domain'), 'id' => 'footerpre', 'description' => '', 'class' => '', 'before_widget' => '<div class="item prefooter-design-item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
 }
 add_action('widgets_init', 'wpbase_widgets_init');
+
 
 // Shortcode
 
@@ -395,56 +397,17 @@ add_action('widgets_init', function () {
     register_widget('hjemmesider_loginform_widget');
 });
 
-/* --------------------- ACF social Widget ----------------------------------------- */
 
-if (class_exists('acf')) {
 
-    class hjemmesider_acf_social_widget extends WP_Widget
-    {
 
-        /**
-         * Sets up the widgets name etc
-         */
-        public function __construct() {
-            parent::__construct('acfsocial',
-             // Base ID
-            __('Sociale links', 'wpbase_domain'),
-             // Name
-            array('description' => __('Sociale link - ACF', 'wpbase_domain'),)
-             // Args
-            );
-        }
 
-        /**
-         * Outputs the content of the widget
-         *
-         * @param array $args
-         * @param array $instance
-         */
-        public function widget($args, $instance) {
-            echo $args['before_widget'];
-            get_template_part('acf/acf-social-links');
-            echo $args['after_widget'];
-        }
-    }
 
-    add_action('widgets_init', function () {
-        register_widget('hjemmesider_acf_social_widget');
-    });
-}
+
+
 
 /* ---------------------- ACF Theme Admin ------------------------------------------------- */
 
-if (function_exists('acf_add_options_page')) {
-
-    acf_add_options_page(array('page_title' => 'Theme General Settings', 'menu_title' => 'WPbase admin', 'menu_slug' => 'wpbase-general-settings', 'capability' => 'edit_posts', 'redirect' => false));
-
-    acf_add_options_sub_page(array('page_title' => 'Theme Social Settings', 'menu_title' => 'Social', 'parent_slug' => 'wpbase-general-settings',));
-}
-
-/* ---------------------- ACF social felter ------------------------------------------------- */
-
-require_once ('includes/acf-social.php');
+ require_once ('includes/acf-social.php');
 
 /* ---------------------- WooCommerce ------------------------------------------------- */
 
@@ -455,25 +418,5 @@ require_once ('includes/woo-wpbase.php');
 
 
 
-function modify_contact_methods($profile_fields) {
-
-    // Add new fields
-    $profile_fields['twitter'] = 'Twitter Username';
-    $profile_fields['facebook'] = 'Facebook URL';
-    $profile_fields['gplus'] = 'Google+ URL';
-
-    // Remove old fields
-    unset($profile_fields['aim']);
-
-    return $profile_fields;
-}
-add_filter('user_contactmethods', 'modify_contact_methods');
 
 
-
-
-add_action('admin_head', 'my_custom_fonts');
-
-function my_custom_fonts() {
-  echo '<link rel="stylesheet" href="' . get_template_directory_uri() .'/css/admin-style.css" type="text/css" media="all" />';
-}

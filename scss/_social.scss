@@ -1,14 +1,14 @@
 .social__icons {
 	float: right;
-	line-height: 20px;
-	font-size: .8em;
+	line-height: 21px;
+	font-size: .85em;
 	@include phone {
 		display: none;
 	}
 	a {
 		text-decoration: none;
 		float: left;
-		font-weight: 600;
+
 		margin: 0 0 0 .5em;
 		&:hover {
 			img {
@@ -20,6 +20,7 @@
 		float: left;
 		margin-right: .25em;
 		background-color: #fff;
-		transition: .1s all;
+		transition: .5s all;
+		border-radius: .25em;
 	}
 }

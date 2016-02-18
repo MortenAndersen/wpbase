@@ -183,5 +183,16 @@ if( numberOfImages > 1 ) {
 // Embed
 $(".embedded__content").fitVids();
 
+// Events
+$(".event__toggle__privat").click(function () {
+	$(this).toggleClass('toggle-hide');
+	$("li.event__privat").slideToggle();
+});
+$(".event__toggle__off").click(function () {
+	$(this).toggleClass('toggle-hide');
+	$("li.event__off").slideToggle();
+});
+
   });
 }(jQuery));
+
