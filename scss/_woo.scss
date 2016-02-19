@@ -43,11 +43,11 @@
   border-radius: 0.3em;
   position: relative;
   background-color: #ccc;
-  background-image: linear-gradient(to top, #144208, #278651);
+  background-image: linear-gradient(to top, #164D08, #308B58);
   outline: none;
   border: none;
   &:hover {
-  	 background-image: linear-gradient(to top, #144208, #39B26F);
+  	 background-image: linear-gradient(to top, #0D2C05, #308B58);
   }
 }
 
@@ -297,11 +297,10 @@ aside .product_list_widget.cart_list li {
 }
 /* Ordering */
 .woocommerce-ordering {
-	padding: .5em ;
-	border: 1px solid rgba(0,0,0,.05);
-	margin-bottom: 1em;
+	padding: 0 0 .5em 1.5em;
 	float: right;
 	clear: both;
+	background: no-repeat left 6px url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOCAxMiIgd2lkdGg9IjE4cHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgZmlsbD0iIzAwMDAwMCIgaWQ9IkNvcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNTUuMDAwMDAwLCAtNDI2LjAwMDAwMCkiPjxnIGlkPSJzb3J0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNTUuMDAwMDAwLCA0MjYuMDAwMDAwKSI+PHBhdGggZD0iTTAsMTIgTDYsMTIgTDYsMTAgTDAsMTAgTDAsMTIgTDAsMTIgWiBNMCwwIEwwLDIgTDE4LDIgTDE4LDAgTDAsMCBMMCwwIFogTTAsNyBMMTIsNyBMMTIsNSBMMCw1IEwwLDcgTDAsNyBaIiBpZD0iU2hhcGUiLz48L2c+PC9nPjwvZz48L3N2Zz4=');
 	select {
 		width: auto;
 		height: auto;
@@ -311,6 +310,7 @@ aside .product_list_widget.cart_list li {
 		-webkit-appearance: menulist;
 		-moz-appearance: menulist;
 		appearance: menulist;
+		background: none;
 	}
 }
 .summary {
@@ -452,7 +452,8 @@ dl.variation {
 }
 
 input[name=apply_coupon],
-input#place_order {
+input#place_order,
+.checkout-button {
 	@extend .woo-but2;
 }
 input#place_order {
@@ -473,4 +474,7 @@ input[name=update_cart] {
 	> div {
 		display: inline;
 	}
+}
+.qty {
+	width: 50px;
 }
