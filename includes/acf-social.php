@@ -105,36 +105,87 @@ endif;
 
 if (class_exists('acf')) {
 
-    class hjemmesider_acf_social_widget extends WP_Widget
-    {
 
-        /**
-         * Sets up the widgets name etc
-         */
-        public function __construct() {
-            parent::__construct('acfsocial',
-             // Base ID
-            __('Sociale links', 'wpbase_domain'),
-             // Name
-            array('description' => __('Sociale link - ACF', 'wpbase_domain'),)
-             // Args
-            );
-        }
+class hjemmesider_social_links_Widget extends WP_Widget {
 
-        /**
-         * Outputs the content of the widget
-         *
-         * @param array $args
-         * @param array $instance
-         */
-        public function widget($args, $instance) {
-            echo $args['before_widget'];
-            get_template_part('acf/acf-social-links');
-            echo $args['after_widget'];
-        }
+    /**
+     * Sets up the widgets name etc
+     */
+    public function __construct() {
+        $widget_ops = array(
+            'classname' => 'wpbase_social_links_widget',
+            'description' => 'Sociale ikoner til deling',
+        );
+        parent::__construct( 'wpbase_social_links_widget', 'Social links', $widget_ops );
     }
 
-    add_action('widgets_init', function () {
-        register_widget('hjemmesider_acf_social_widget');
-    });
+    /**
+     * Outputs the content of the widget
+     *
+     * @param array $args
+     * @param array $instance
+     */
+
+    public function widget( $args, $instance ) {
+        // outputs the content of the widget
+        echo $args['before_widget'];
+        if ( ! empty( $instance['title'] ) ) {
+            echo  $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+        }
+
+?>
+
+<ul class="acf__social">
+<?php if( get_field( 'facebook_url', 'option' ) ): ?>
+<li><a class="facebook__link" href="<?php the_field( 'facebook_url', 'options' ); ?>" target="_blank">Facebook</a></li>
+<?php endif; ?>
+<?php if( get_field( 'twitter_url', 'option' ) ): ?>
+<li><a class="twitter__link" href="<?php the_field( 'twitter_url', 'options' ); ?>" target="_blank">Twitter</a></li>
+<?php endif; ?>
+<?php if( get_field( 'google_plus_url', 'option' ) ): ?>
+<li><a class="google-plus__link" href="<?php the_field( 'google_plus_url', 'options' ); ?>" target="_blank">Google +</a></li>
+<?php endif; ?>
+<?php if( get_field( 'linkedin_url', 'option' ) ): ?>
+<li><a class="linkedin__link" href="<?php the_field( 'linkedin_url', 'options' ); ?>" target="_blank">Linkedin</a></li>
+<?php endif; ?>
+</ul>
+
+<?php
+
+        echo $args['after_widget'];
+    }
+
+    /**
+     * Outputs the options form on admin
+     *
+     * @param array $instance The widget options
+     */
+    public function form( $instance ) {
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Følg os på', 'wpbase_domain' );
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        <?php
+    }
+
+    /**
+     * Processing widget options on save
+     *
+     * @param array $new_instance The new options
+     * @param array $old_instance The previous options
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+
+        return $instance;
+    }
+}
+
+add_action( 'widgets_init', function(){
+    register_widget( 'hjemmesider_social_links_Widget' );
+});
+
 }

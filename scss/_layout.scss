@@ -115,6 +115,9 @@ article {
     .archive.woocommerce & {
         width: 100%;
     }
+    &.woo__wpbase {
+        width: 65%;
+    }
 }
 .woocommerce article {
     @include phone {
@@ -153,6 +156,9 @@ aside {
                 min-height: inherit;
             }
         }
+    }
+    &.woo__aside {
+        width: 35%;
     }
 }
 
