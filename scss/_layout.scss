@@ -119,11 +119,6 @@ article {
         width: 65%;
     }
 }
-.woocommerce article {
-    @include phone {
-            padding-top: 2% !important;
-        }
-}
 
 /*
  * Aside

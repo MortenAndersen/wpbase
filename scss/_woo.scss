@@ -151,6 +151,7 @@ ul.products {
 
 }
 .related, .upsells {
+	font-size: .8em;
 	@include phone {
 				display: none;
 			}
@@ -192,7 +193,7 @@ ul.product_list_widget {
     display: flex;
   flex-wrap: wrap;
     line-height: 1.05;
-    font-size: .85em;
+    font-size: .75em;
     margin-left: -3%;
 	li{
 		flex-direction: column;
@@ -225,6 +226,9 @@ aside .product_list_widget.cart_list li {
 	max-width: 100%;
 	background: inherit;
 	border-bottom: 1px solid rgba(0,0,0,.05);
+	&.empty {
+		border: none;
+	}
 	img {
 		width: 25%;
 		float: left;
@@ -329,7 +333,14 @@ aside .product_list_widget.cart_list li {
 	}
 	td {
 		border: none;
-		padding: .25em 0;
+		display: block;
+		padding: 0;
+	}
+	label {
+		font-size: .7em;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 0 0 .25em 0;
 	}
 }
 .woo__wp__list__title {
