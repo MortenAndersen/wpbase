@@ -115,8 +115,11 @@ article {
     .archive.woocommerce & {
         width: 100%;
     }
-    &.woo__wpbase {
+    &.first-aside {
         width: 65%;
+    }
+    &.no-aside {
+        width: 100%;
     }
 }
 

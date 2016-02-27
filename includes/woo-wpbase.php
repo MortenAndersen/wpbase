@@ -7,10 +7,34 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 add_action('woocommerce_before_main_content', 'wpbase_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'wpbase_wrapper_end', 10);
 
+// Check article class
+
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 16;' ), 20 );
 function wpbase_wrapper_start() {
-  echo '<article class="woo__wpbase">';
+
+	if (is_product_category()) {
+  echo '<article class="product_archive">';
+	}
+
+	elseif (is_product_tag()) {
+  echo '<article class="product_tag">';
+	}
+
+	elseif (is_product() && is_active_sidebar( 'wpbasewooleft' ) ) {
+  echo '<article class="product first-aside">';
+	}
+
+	elseif (is_product() && !is_active_sidebar( 'wpbasewooleft' ) ) {
+  echo '<article class="product no-aside">';
+	}
+
+	elseif (is_shop() ) {
+  echo '<article class="shop">';
+	}
+
 }
+
+
 
 function wpbase_wrapper_end() {
   echo '</article>';
