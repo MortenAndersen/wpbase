@@ -14,11 +14,6 @@
 
 <header role="banner">
 <div class="page-wrap page-wrap-top">
-<?php
-if ( class_exists( 'WooCommerce' ) ) {
- get_template_part( 'woocommerce/wpbase/bar-cart' );
-}
- ?>
 <?php dynamic_sidebar( 'headerstackright' ); ?>
 <?php dynamic_sidebar( 'headerstack' ); ?>
 <?php if ( is_active_sidebar( 'headercontainer' ) ) { ?>
