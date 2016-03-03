@@ -92,7 +92,8 @@ $fields;
 function wpbase_woo_widgets_init() {
 
     register_sidebar(array('name' => __('WooCommerce single Left', 'wpbase_domain'), 'id' => 'wpbasewooleft', 'description' => '', 'class' => '', 'before_widget' => '<section class="woo__section %2$s">', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('WooCommerce bar', 'wpbase_domain'), 'id' => 'wpbasewoobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="woo__bar__messages">', 'after_widget' => '</div>', 'before_title' => '<strong>', 'after_title' => '</strong>',));
+    register_sidebar(array('name' => __('WooCommerce bar', 'wpbase_domain'), 'id' => 'wpbasewoobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="woo__bar__messages %2$s">', 'after_widget' => '</div>', 'before_title' => '<strong>', 'after_title' => '</strong>',));
+    register_sidebar(array('name' => __('WooCommerce archive top', 'wpbase_domain'), 'id' => 'wpbasewooarchive', 'description' => '', 'class' => '', 'before_widget' => '<div class="woo__archive_widget %2$s">', 'after_widget' => '</div>', 'before_title' => '<strong>', 'after_title' => '</strong>',));
 }
 add_action('widgets_init', 'wpbase_woo_widgets_init');
 
