@@ -46,7 +46,6 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php

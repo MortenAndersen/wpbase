@@ -82,17 +82,17 @@ add_action('wp_enqueue_scripts', 'wpbase_scripts');
 
 function wpbase_widgets_init() {
 
-    register_sidebar(array('name' => __('Header Stack Right', 'wpbase_domain'), 'id' => 'headerstackright', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack content__right">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Header Stack', 'wpbase_domain'), 'id' => 'headerstack', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Header Container', 'wpbase_domain'), 'id' => 'headercontainer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Header Flex DESIGNER', 'wpbase_domain'), 'id' => 'headerdesigner', 'description' => '', 'class' => '', 'before_widget' => '<div class="header-design-item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Header Stack Right', 'wpbase_domain'), 'id' => 'headerstackright', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack content__right %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Header Stack', 'wpbase_domain'), 'id' => 'headerstack', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Header Container', 'wpbase_domain'), 'id' => 'headercontainer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Header Flex DESIGNER', 'wpbase_domain'), 'id' => 'headerdesigner', 'description' => '', 'class' => '', 'before_widget' => '<div class="header-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Left', 'wpbase_domain'), 'id' => 'left', 'description' => '', 'class' => '', 'before_widget' => '<section>', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Right', 'wpbase_domain'), 'id' => 'right', 'description' => '', 'class' => '', 'before_widget' => '<section>', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Banner', 'wpbase_domain'), 'id' => 'banner', 'description' => 'Banner i browserens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Banner inside', 'wpbase_domain'), 'id' => 'bannerinside', 'description' => 'Banner i sidens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Info bar', 'wpbase_domain'), 'id' => 'infobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('PRE Footer', 'wpbase_domain'), 'id' => 'footerpre', 'description' => '', 'class' => '', 'before_widget' => '<div class="item prefooter-design-item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Info bar', 'wpbase_domain'), 'id' => 'infobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('PRE Footer', 'wpbase_domain'), 'id' => 'footerpre', 'description' => '', 'class' => '', 'before_widget' => '<div class="item prefooter-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
 }
 add_action('widgets_init', 'wpbase_widgets_init');
 

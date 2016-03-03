@@ -62,6 +62,22 @@ acf_add_local_field_group(array (
             'default_value' => '',
             'placeholder' => '',
         ),
+         array (
+            'key' => 'field_hjeminstagram',
+            'label' => 'Instagram',
+            'name' => 'instagram_url',
+            'type' => 'url',
+            'instructions' => 'Link til Instagram',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+        ),
         array (
             'key' => 'field_hjemlinkedin',
             'label' => 'Linkedin',
@@ -141,6 +157,9 @@ class hjemmesider_social_links_Widget extends WP_Widget {
 <?php endif; ?>
 <?php if( get_field( 'twitter_url', 'option' ) ): ?>
 <li><a class="twitter__link" href="<?php the_field( 'twitter_url', 'options' ); ?>" target="_blank">Twitter</a></li>
+<?php endif; ?>
+<?php if( get_field( 'instagram_url', 'option' ) ): ?>
+<li><a class="instagram__link" href="<?php the_field( 'instagram_url', 'options' ); ?>" target="_blank">Instagram</a></li>
 <?php endif; ?>
 <?php if( get_field( 'google_plus_url', 'option' ) ): ?>
 <li><a class="google-plus__link" href="<?php the_field( 'google_plus_url', 'options' ); ?>" target="_blank">Google +</a></li>
