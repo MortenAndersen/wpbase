@@ -218,17 +218,17 @@ input[type=submit] {
 .right-align {
     text-align: right;
 }
-
+footer {
 select {
     width: 100%;
     appearance: none;
-    height: 3em;
+    height: 2.2em;
     background: rgba(255, 255, 255, .1);
     padding: 0 .5em;
     border: 1px solid rgba(255, 255, 255, .1);
     outline: none;
 }
-
+}
 select option {
     font-size: 1.1em;
 }
