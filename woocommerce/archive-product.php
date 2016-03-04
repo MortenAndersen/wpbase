@@ -20,7 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
+<?php if ( is_active_sidebar( 'wpbasewooarchiveaside' ) ) { ?>
+<aside class="first woo_aside">
+<?php dynamic_sidebar( 'wpbasewooarchiveaside' ); ?>
+</aside>
+<?php } ?>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.

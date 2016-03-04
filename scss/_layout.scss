@@ -103,7 +103,8 @@ article {
     .page-template-page-aside & {
         width: 100% - $aside-first - $aside-last;
     }
-    .page-template-page-aside-left &{
+    .page-template-page-aside-left &,
+    &.product_archive_small{
         width: 100% - $aside-first;
     }
     .page-template-page-aside-right &,
@@ -112,8 +113,9 @@ article {
     .blog & {
         width: 100% - $aside-last;
     }
-    .archive.woocommerce & {
-        width: 100%;
+    &.product_archive_big,
+    &.product_tag_big {
+       width: 100%;
     }
     &.first-aside {
         width: 65%;

@@ -1,0 +1,48 @@
+ul.foto {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	color: #fff;
+	font-size: .9em;
+	> li {
+		flex: 1 32%;
+		max-width: 32%;
+		background: #231F20;
+		overflow: hidden;
+		padding: 2em;
+		margin-bottom: 1em;
+		&:nth-child(3n+2){
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+		@include phone {
+			flex: 1 100%;
+			max-width: inherit;
+			margin: 0 0 .5em 0 !important;
+		}
+	}
+	h4 {
+		color: inherit;
+		margin: 0 0 .5em 0;
+	}
+	img {
+		width: 100%;
+		float: left;
+		transition-property: transform;
+		transition-duration: .5s;
+
+	}
+	.thumb-container {
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.7);
+		margin: 0 0 .5em 0;
+	}
+	a {
+		color: inherit;
+		&:hover {
+			img {
+				transform: scale(1.5);
+			}
+		}
+	}
+}

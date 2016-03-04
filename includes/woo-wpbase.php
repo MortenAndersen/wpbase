@@ -12,12 +12,20 @@ add_action('woocommerce_after_main_content', 'wpbase_wrapper_end', 10);
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 16;' ), 20 );
 function wpbase_wrapper_start() {
 
-	if (is_product_category()) {
-  echo '<article class="product_archive">';
+	if (is_product_category() && !is_active_sidebar( 'wpbasewooarchiveaside' )) {
+  echo '<article class="product_archive_big">';
 	}
 
-	elseif (is_product_tag()) {
-  echo '<article class="product_tag">';
+	elseif (is_product_category() && is_active_sidebar( 'wpbasewooarchiveaside' ) ) {
+  echo '<article class="product_archive_small">';
+	}
+
+	elseif (is_product_tag() && is_active_sidebar( 'wpbasewooarchiveaside' ) ) {
+  echo '<article class="product_tag_small">';
+	}
+
+	elseif (is_product_tag() && !is_active_sidebar( 'wpbasewooarchiveaside' )) {
+  echo '<article class="product_tag_big">';
 	}
 
 	elseif (is_product() && is_active_sidebar( 'wpbasewooleft' ) ) {
@@ -93,6 +101,7 @@ function wpbase_woo_widgets_init() {
 
     register_sidebar(array('name' => __('WooCommerce single Left', 'wpbase_domain'), 'id' => 'wpbasewooleft', 'description' => '', 'class' => '', 'before_widget' => '<section class="woo__section %2$s">', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('WooCommerce archive top', 'wpbase_domain'), 'id' => 'wpbasewooarchive', 'description' => '', 'class' => '', 'before_widget' => '<div class="woo__archive_widget %2$s">', 'after_widget' => '</div>', 'before_title' => '<strong>', 'after_title' => '</strong>',));
+    register_sidebar(array('name' => __('WooCommerce archive aside', 'wpbase_domain'), 'id' => 'wpbasewooarchiveaside', 'description' => '', 'class' => '', 'before_widget' => '<div class="woo__archive_aside_widget %2$s">', 'after_widget' => '</div>', 'before_title' => '<strong>', 'after_title' => '</strong>',));
 }
 add_action('widgets_init', 'wpbase_woo_widgets_init');
 
