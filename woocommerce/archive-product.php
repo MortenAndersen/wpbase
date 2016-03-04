@@ -89,6 +89,13 @@ get_header( 'shop' ); ?>
 
 		<?php endif; ?>
 
+		<?php
+		/** HJEMMESIDER.DK wpbase **/
+		if( class_exists('acf') ) {
+ 		get_template_part( 'woocommerce/wpbase/category-bottom' );
+ 	}
+  ?>
+
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
@@ -107,11 +114,6 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
-	<?php
-		/** HJEMMESIDER.DK wpbase **/
-		if( class_exists('acf') ) {
- 		get_template_part( 'woocommerce/wpbase/category-bottom' );
- 	}
-  ?>
+
 
 <?php get_footer( 'shop' ); ?>
