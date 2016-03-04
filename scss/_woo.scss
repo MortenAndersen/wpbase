@@ -33,7 +33,6 @@
   opacity: 1;
 }
 .related &, .upsells &, .cross-sells & {
-	padding: .5em 1em;
 }
 }
 .related {
@@ -156,7 +155,7 @@ ul.products {
 
 }
 .related, .upsells {
-	font-size: .8em;
+	font-size: .9em;
 	@include phone {
 				display: none;
 			}
