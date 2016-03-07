@@ -36,8 +36,11 @@ function wpbase_wrapper_start() {
   echo '<article class="product no-aside">';
 	}
 
-	elseif (is_shop() ) {
-  echo '<article class="shop">';
+	elseif (is_shop() && is_active_sidebar( 'wpbasewooarchiveaside' ) ) {
+  echo '<article class="shop first-aside">';
+	}
+	elseif (is_shop() && !is_active_sidebar( 'wpbasewooarchiveaside' ) ) {
+  echo '<article class="shop no-aside">';
 	}
 
 }
