@@ -6,7 +6,7 @@ function custom_wp_nav_menu($var) {
     return is_array($var) ? array_intersect($var, array(
 
     //List of allowed menu classes
-    'current_page_item', 'current_page_parent', 'current_page_ancestor', 'first', 'last', 'vertical', 'horizontal', 'menu-item-has-children')) : '';
+    'current_page_item', 'current_page_parent', 'current_page_ancestor', 'first', 'last', 'vertical', 'horizontal', 'menu-item-has-children', 'current-menu-item')) : '';
 }
 add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
 add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
@@ -17,7 +17,7 @@ function current_to_active($text) {
     $replace = array(
 
     //List of menu item classes that should be changed to "active"
-    'current_page_item' => 'active', 'current_page_parent' => 'active', 'current_page_ancestor' => 'active',);
+    'current_page_item' => 'active', 'current_page_parent' => 'active', 'current_page_ancestor' => 'active', 'current-menu-item' => 'active');
     $text = str_replace(array_keys($replace), $replace, $text);
     return $text;
 }

@@ -172,6 +172,9 @@ textarea,
         border-left: 4px solid #C71111;
     }
 }
+input[type=radio]{
+        width: 20px !important;
+    }
 .select2-container .select2-choice {
     border: none;
     padding: 0;
