@@ -65,7 +65,7 @@ border: none;
 	margin: 1em 0;
 }
 button[type="submit"]:disabled {
-    background: red !important;
+    opacity: .2;
 }
 .reset_variations {
 	display: none !important;
@@ -261,6 +261,7 @@ aside .product_list_widget.cart_list li {
 	padding: 0 0 1em 0;
 	font-size: .75em;
   teext-transform: uppercase;
+  font-weight: 300;
   @include phone {
   	display: none;
   }
