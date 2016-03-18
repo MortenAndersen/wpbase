@@ -23,6 +23,25 @@ function current_to_active($text) {
 }
 add_filter('wp_nav_menu', 'current_to_active');
 
+// Length of excerpt
+
+    function wpbase_excerpt_length($length) {
+    global $post;
+    if ($post->post_type == 'post')
+    return 30;
+    else if ($post->post_type == 'news')
+    return 10;
+    else
+    return 20;
+    }
+    add_filter('excerpt_length', 'wpbase_excerpt_length');
+
+    function wpbase_excerpt_more( $more ) {
+    return ' ...';
+}
+add_filter( 'excerpt_more', 'wpbase_excerpt_more' );
+
+
 //Deletes empty classes and removes the sub menu class
 function strip_empty_classes($menu) {
     $menu = preg_replace('/ class=""| class="sub-menu"/', '', $menu);
