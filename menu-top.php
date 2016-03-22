@@ -1,12 +1,10 @@
-<div class="top__menu__bar">
 <?php
 	$top_nav = array(
-		'theme_location' => 'header-menu',
+		'theme_location' => 'top-menu',
 		'container' =>  '',
-     	'items_wrap'  => '<nav role="navigation" class="drop__down JS-menu"><ul>'."\n".'%3$s</ul></nav>',
+     	'items_wrap'  => '<nav role="navigation" class="top__menu"><ul>'."\n".'%3$s</ul></nav>',
 
-		'sub_menu' => true
+		'sub_menu' => false
 	);
 ?>
 <?php wp_nav_menu( $top_nav ); ?>
-</div>

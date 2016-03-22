@@ -192,7 +192,7 @@ if (!function_exists('wpbase_setup')):
         set_post_thumbnail_size(550, 415, true);
 
         // This theme uses wp_nav_menu() in two locations.
-        register_nav_menus(array('header-menu' => __('Header Menu', 'wpbase_domain'), 'footer-menu' => __('Footer Menu', 'wpbase_domain'),));
+        register_nav_menus(array('header-menu' => __('Main Menu', 'wpbase_domain'), 'top-menu' => __('Top Menu', 'wpbase_domain'), 'footer-menu' => __('Footer Menu', 'wpbase_domain'),));
 
         /*
          * Switch default core markup for search form, comment form, and comments

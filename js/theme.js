@@ -193,6 +193,7 @@ $(".event__toggle__off").click(function () {
 	$("li.event__off").slideToggle();
 });
 
+
   });
 }(jQuery));
 

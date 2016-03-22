@@ -14,6 +14,7 @@
 
 <header role="banner">
 <div class="page-wrap page-wrap-top">
+<?php get_template_part( 'menu-top' ); ?>
 <?php dynamic_sidebar( 'headerstackright' ); ?>
 <?php dynamic_sidebar( 'headerstack' ); ?>
 <?php if ( is_active_sidebar( 'headercontainer' ) ) { ?>
@@ -28,7 +29,7 @@
 <?php } ?>
 </div>
 </header>
-<?php get_template_part( 'menu-top' ); ?>
+<?php get_template_part( 'menu-main' ); ?>
 <?php get_template_part( 'bar' ); ?>
 <?php get_template_part( 'banner' ); ?>
 <div class="page-wrap">

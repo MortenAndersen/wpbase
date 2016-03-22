@@ -1,0 +1,32 @@
+.top__menu {
+	overflow: hidden;
+	clear: both;
+	padding: 0 0 1em 0;
+	line-height: 1;
+	ul {
+		float: right;
+	}
+	li {
+		float: left;
+		border-right: 1px solid rgba(0,0,0,.2);
+		padding: 0 .35em;
+		&:first-child{
+			padding-left: 0;
+		}
+		&:last-child {
+			border: none;
+			padding-right: 0;
+		}
+		&.active {
+			a{
+				font-weight: bold;
+			}
+		}
+	}
+	a{
+		color: inherit;
+			&:hover {
+				color: #666;
+			}
+	}
+}
