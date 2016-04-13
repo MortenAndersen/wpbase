@@ -135,7 +135,7 @@ $('.js-toggle-target1').slideToggle();
 $(".gallery a:has(> img)").attr('data-lightbox', 'image-gallery');
 
 /* Img in content class ligthb */
-$("a.lightb").attr('data-lightbox', 'image-content');
+$("a.lightb, .googpicwrap a").attr('data-lightbox', 'image-content');
 
 $( "#accordion" ).accordion({
       heightStyle: "content"
@@ -191,6 +191,36 @@ $(".event__toggle__privat").click(function () {
 $(".event__toggle__off").click(function () {
 	$(this).toggleClass('toggle-hide');
 	$("li.event__off").slideToggle();
+});
+
+// Til toppen
+$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+
+	//Click event to scroll to top
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+
+
+
+
+
+ $('#getChkBoxValues').click(function () {
+  var checkedBoxes = $('.tags:checked')
+  if (checkedBoxes.length === 0) {
+    alert('Please select atleast one checkbox!');
+    return;
+  }
+  window.location = "http://localhost:9000/wpbase/tag/" + checkedBoxes.map(function () {
+    return this.value;
+  }).toArray().join('+');
 });
 
 

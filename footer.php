@@ -11,6 +11,8 @@
 <span class="icon-bar"></span>
 </div>
 
+<a class="scrollToTop" href="#">^</a>
+
 <?php wp_footer(); ?>
 <?php get_template_part( 'scripts' ); ?>
 

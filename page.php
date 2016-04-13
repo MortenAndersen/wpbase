@@ -11,3 +11,10 @@
 <?php comments_template(); ?>
 </article>
 <?php get_footer(); ?>
+
+
+
+
+
+
+

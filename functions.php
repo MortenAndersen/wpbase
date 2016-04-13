@@ -416,12 +416,22 @@ add_action('widgets_init', function () {
     register_widget('hjemmesider_loginform_widget');
 });
 
+/* ---------------------- Search form - FILEARCHIVE ------------------------------------------------- */
 
+function hjemmesider_files_earch( $form ) {
 
+    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+    <div><label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
+    <input type="text" placeholder="Søg i filarkivet" value="' . get_search_query() . '" name="s" id="s" />
+    <input type="hidden" name="post_type" value="filarkiv" />
+    <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
+    </div>
+    </form>';
 
+    return $form;
+}
 
-
-
+add_shortcode('filesearch', 'hjemmesider_files_earch');
 
 
 /* ---------------------- ACF Theme Admin ------------------------------------------------- */
@@ -431,11 +441,6 @@ add_action('widgets_init', function () {
 /* ---------------------- WooCommerce ------------------------------------------------- */
 
 require_once ('includes/woo-wpbase.php');
-
-
-
-
-
 
 
 

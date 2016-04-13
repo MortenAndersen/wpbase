@@ -5,6 +5,9 @@
 	line-height: 1;
 	ul {
 		float: right;
+		@include phone {
+			float: left;
+		}
 	}
 	li {
 		float: left;

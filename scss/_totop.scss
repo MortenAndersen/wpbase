@@ -1,0 +1,21 @@
+.scrollToTop {
+    height: 2em;
+    width: 2em;
+    line-height: 2.3;
+    background: rgba(57,57,57,0.8);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: fixed;
+    z-index: 1000;
+    bottom: .5em;
+    right: .75em;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+    transition: .5s all;
+    &:hover {
+        background: rgba(29, 113, 6, 0.8);
+    }
+}

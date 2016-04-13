@@ -1,13 +1,13 @@
 .woo-but {
 	display: inline-block;
-  padding: .2em 1.5em;
+  padding: .3em 1.5em;
   font-size: 1em;
   color: inherit;
   text-decoration: none;
-  border-radius: 0.3em;
+  border-radius: 3px;
   position: relative;
-  background-color: #ccc;
-  background-image: linear-gradient(to top, rgb(244,244,244), rgb(230,230,230));
+ // background-color: #ccc;
+ background-image: linear-gradient(to top, #fff, rgb(240,240,240));
   box-shadow: 0 0 2px #999;
   -webkit-backface-visibility: hidden;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -23,8 +23,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 0.3em;
-  background-image: linear-gradient(to top, rgba(0,0,0,0.05), rgba(0,0,0,0.1));
+  border-radius: 3px;
+ background-image: linear-gradient(to top, rgba(0,0,0,0.02), rgba(0,0,0,0.05));
   transition: opacity 0.5s ease-out;
   z-index: 2;
   opacity: 0;
@@ -32,8 +32,11 @@
 	&:hover:after {
   opacity: 1;
 }
-.related &, .upsells &, .cross-sells & {
 }
+.related, .upsells, .cross-sells {
+	@include phone {
+		display: none;
+	}
 }
 .related {
 	clear: both;
@@ -55,6 +58,13 @@
   border: none;
   &:hover {
   	 background-image: linear-gradient(to top, #0D2C05, #308B58);
+  }
+  @include phone {
+  	width: 100%;
+  	text-align: center;
+  	font-weight: bold;
+  	text-transform: uppercase;
+  	font-size: 1.5em;
   }
 }
 
@@ -585,4 +595,36 @@ $primary: #666;
 	.woo__archive_widget,
 	.woo__buttom__txt {
 		clear: both;
+	}
+	table.shop_table {
+		@include phone {
+			th{
+				display: none;
+			}
+			td {
+				display: flex;
+				border: none;
+				border-bottom: 1px solid #ddd;
+				padding: 0.5em 0;
+			}
+			.product-subtotal {
+				background: rgba(0,0,0,.01);
+				font-size: 1.5em;
+			}
+			.cart_item img {
+				max-width: 33%;
+			}
+			.product-thumbnail {
+				a {
+					display: block;
+					width: 100%;
+				}
+			}
+			.order-total {
+				font-size: 2em;
+			}
+			.cart-subtotal {
+				display: none;
+			}
+		}
 	}

@@ -213,7 +213,9 @@ textarea {
 abbr.required {
     border: none;
 }
-
+input {
+    outline: none;
+}
 input[type=submit] {
     @extend .but;
     padding-left: 1em;
@@ -222,6 +224,9 @@ input[type=submit] {
     font-size: 110%;
     aside & {
         float: right;
+    }
+    @include phone {
+        width: 100%;
     }
 }
 
@@ -241,6 +246,11 @@ select {
 }
 select option {
     font-size: 1.1em;
+}
+.wpcf7 {
+    select {
+        margin-left: 1px;
+    }
 }
 
 table {
@@ -277,4 +287,18 @@ figcaption {
     font-style: italic;
     font-size: .85em;
     padding-bottom: .5em;
+}
+#searchform {
+    overflow: hidden;
+    input {
+        float: left;
+        width: 70%;
+        line-height: 2;
+        padding: 0 .25em;
+        font-size: 100%;
+        &[type=submit] {
+            width: 27%;
+            float: right;
+        }
+    }
 }
