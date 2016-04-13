@@ -1,3 +1,4 @@
+<?php if ( has_nav_menu( 'top-menu' ) ) : ?>
 <?php
 	$top_nav = array(
 		'theme_location' => 'top-menu',
@@ -7,3 +8,4 @@
 	);
 ?>
 <?php wp_nav_menu( $top_nav ); ?>
+<?php endif; ?>

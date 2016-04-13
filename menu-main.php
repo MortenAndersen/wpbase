@@ -1,3 +1,4 @@
+<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
 <div class="top__menu__bar">
 <?php
 	$main_nav = array(
@@ -10,3 +11,4 @@
 ?>
 <?php wp_nav_menu( $main_nav ); ?>
 </div>
+<?php endif; ?>
