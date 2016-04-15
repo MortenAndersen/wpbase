@@ -2,6 +2,10 @@
 	ul {
 		margin: 0;
 		padding: 0;
+		@include phone {
+		float: left;
+		padding-bottom: 1em;
+	}
 	}
 	li {
 		margin: 0;
