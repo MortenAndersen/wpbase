@@ -596,6 +596,15 @@ $primary: #666;
 	.woo__buttom__txt {
 		clear: both;
 	}
+	ul.payment_methods {
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0 0 .5em 0;
+			list-style-type: none;
+		}
+	}
 	table.shop_table {
 		@include phone {
 			th{
