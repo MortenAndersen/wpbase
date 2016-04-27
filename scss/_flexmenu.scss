@@ -1,0 +1,87 @@
+nav.flex__menu {
+    padding: 0 1em;
+    > ul {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 2.5;
+        > li {
+            flex-grow: 1;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, .5);
+            position: relative;
+            &:last-child {
+                border: none;
+            }
+            &.active,
+            &:hover {
+                background: rgba(0, 0, 0, .2);
+            }
+            &:hover {
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+    a {
+        color: #fff;
+        display: block;
+        padding: 0;
+    }
+    ul ul {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        background: $menu-bg;
+        width: 100%;
+        line-height: 1.2;
+        box-shadow: 0 3px 6px -3px #000;
+        li {
+            padding: .5em 1em;
+            text-align: left;
+            &.active,
+            &:hover {
+                background: rgba(0, 0, 0, .2);
+            }
+        }
+    }
+    @include phone {
+            position: absolute;
+            z-index: 1000;
+            top: 2em;
+            left: 0;
+            right: 0;
+            background: inherit;
+        	padding: 0;
+        	font-size: 2em;
+        	display: none;
+            .admin-bar & {
+                top: 3em;
+            }
+        	ul {
+        		display: block;
+        		font-weight: bold;
+        		text-transform: uppercase;
+        		line-height: 1.5;
+        		 ul {
+        		 	display: block;
+        		 	position: relative;
+        		 	box-shadow: none;
+        		 	line-height: inherit;
+        		 	font-weight: normal;
+        		 	text-transform: normal;
+        		 	li {
+        		 		padding: 0;
+        		 		text-align: center;
+        		 	}
+        		 }
+        	}
+        		li {
+        			border: none;
+        		}
+        		a {
+        			border-bottom: 1px solid rgba(255,255,255,.2);
+                    padding: .5em;
+        		}
+        }
+}

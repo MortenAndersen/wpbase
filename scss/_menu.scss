@@ -58,8 +58,10 @@ nav {
     @include phone {
         display: block;
     }
+    .admin-bar & {
+        top: 3rem;
+    }
 }
-
 .icon-bar {
     display: block;
     width: 25px;

@@ -104,7 +104,7 @@ function wpbase_widgets_init() {
     register_sidebar(array('name' => __('Header Stack Right', 'wpbase_domain'), 'id' => 'headerstackright', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack content__right %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Header Stack', 'wpbase_domain'), 'id' => 'headerstack', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Header Container', 'wpbase_domain'), 'id' => 'headercontainer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Header Flex DESIGNER', 'wpbase_domain'), 'id' => 'headerdesigner', 'description' => '', 'class' => '', 'before_widget' => '<div class="header-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Header Flex DESIGNER', 'wpbase_domain'), 'id' => 'headerdesigner', 'description' => '', 'class' => '', 'before_widget' => '<div id="%1$s" class="header-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Left', 'wpbase_domain'), 'id' => 'left', 'description' => '', 'class' => '', 'before_widget' => '<section>', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Right', 'wpbase_domain'), 'id' => 'right', 'description' => '', 'class' => '', 'before_widget' => '<section>', 'after_widget' => '</section>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Banner', 'wpbase_domain'), 'id' => 'banner', 'description' => 'Banner i browserens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
@@ -212,6 +212,8 @@ if (!function_exists('wpbase_setup')):
         remove_action('wp_head', 'start_post_rel_link', 10, 0);
         remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
         remove_action('wp_head', 'wp_generator');
+        remove_action('wp_head', 'rest_output_link_wp_head');
+        remove_action('wp_head', 'wp_oembed_add_discovery_links');
     }
 endif;
  // wpbase_setup

@@ -4,7 +4,7 @@
 	$main_nav = array(
 		'theme_location' => 'header-menu',
 		'container' =>  '',
-     	'items_wrap'  => '<nav role="navigation" class="drop__down JS-menu"><ul>'."\n".'%3$s</ul></nav>',
+     	'items_wrap'  => '<nav role="navigation" class="flex__menu JS-menu"><ul>'."\n".'%3$s</ul></nav>',
 
 		'sub_menu' => true
 	);

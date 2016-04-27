@@ -100,6 +100,16 @@ section,
     }
 }
 
+        ul.indryk,ol.indryk {
+            margin: 0 0 1em 0;
+            padding: 0;
+        li {
+            margin: 0 0 0 1.5em;
+            padding: 0 0 .25em 0;
+            list-style-type: inherit;
+        }
+    }
+
 .pagination {
     overflow: hidden;
     padding: 1em 0 0 0;

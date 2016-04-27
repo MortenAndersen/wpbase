@@ -110,42 +110,11 @@ nav.drop__down ul li:hover > ul
 {
 	display:block;
 }
-.top__menu__bar {
-	width: 100%;
-	background-color: rgb(16, 95, 121);
-	clear: both;
-	nav {
-		@extend .page-width;
-	}
-}
+
 li li.menu-item-has-children > a:after {
 	content: "\25b8";
 	float: right;
 	@include phone {
 		display: none;
 	}
-}
-/* MoblieMenu Icon */
-.menu__icon {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	z-index: 100000;
-	display: none;
-	@include phone {
-		display: block;
-	}
-}
-
-.icon-bar {
-	display: block;
-	width: 25px;
-	height: 4px;
-	background-color: rgba(0,0,0,.8);
-	border-radius: 1px;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-	margin-top: 3px;
-	cursor: pointer;
-		&.mobile-menu-active {
-		}
 }
