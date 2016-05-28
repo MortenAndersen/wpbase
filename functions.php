@@ -437,12 +437,14 @@ add_shortcode('filesearch', 'hjemmesider_files_earch');
 
 
 /* ---------------------- ACF Theme Admin ------------------------------------------------- */
-
+if (class_exists('acf')):
  require_once ('includes/acf-social.php');
-
+endif;
 /* ---------------------- WooCommerce ------------------------------------------------- */
 
+if (class_exists('WooCommerce')):
 require_once ('includes/woo-wpbase.php');
+endif;
 
 
 

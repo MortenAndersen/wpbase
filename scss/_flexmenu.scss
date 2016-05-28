@@ -39,6 +39,7 @@ nav.flex__menu {
         li {
             padding: .5em 1em;
             text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,.5);
             &.active,
             &:hover {
                 background: rgba(0, 0, 0, .2);

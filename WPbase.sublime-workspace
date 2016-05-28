@@ -4,16 +4,16 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"margin-top"
+			],
+			[
 				"li",
 				"list-style-type"
 			],
 			[
 				"pad",
 				"padding"
-			],
-			[
-				"ma",
-				"margin"
 			],
 			[
 				"text",
@@ -372,18 +372,18 @@
 	"buffers":
 	[
 		{
-			"file": "scss/_wp.scss",
+			"file": "/Applications/MAMP/htdocs/infuser/wp-content/themes/infuser/infuser.sublime-project",
 			"settings":
 			{
-				"buffer_size": 2347,
+				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "menu-main.php",
+			"file": "/Applications/MAMP/htdocs/drupal8/sites/default/settings.php",
 			"settings":
 			{
-				"buffer_size": 352,
+				"buffer_size": 29652,
 				"line_ending": "Unix"
 			}
 		},
@@ -391,15 +391,7 @@
 			"file": "scss/_flexmenu.scss",
 			"settings":
 			{
-				"buffer_size": 1938,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scss/_font.scss",
-			"settings":
-			{
-				"buffer_size": 5153,
+				"buffer_size": 2025,
 				"line_ending": "Unix"
 			}
 		}
@@ -494,6 +486,13 @@
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_wp.scss",
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/menu-main.php",
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_flexmenu.scss",
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/functions.php",
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_font.scss",
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_layout.scss",
+		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_nav.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-settings.php",
 		"/Applications/MAMP/htdocs/drupal8/themes/basic/templates/field--comment.html.twig",
 		"/Applications/MAMP/htdocs/drupal8/themes/basic/templates/html.html.twig",
@@ -505,18 +504,14 @@
 		"/Applications/MAMP/htdocs/drupal8/themes/basic/templates/status-messages.html.twig",
 		"/Applications/MAMP/htdocs/drupal8/themes/basic/templates/comment.html.twig",
 		"/Applications/MAMP/htdocs/drupal8/themes/basic/templates/breadcrumb.html.twig",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/menu-main.php",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_flexmenu.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/style.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_dropdown.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_menu.scss",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_nav.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_variable.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_filearchive.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_polylang.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_personer.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_woo.scss",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/functions.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/archive-filarkiv.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/footer.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_totop.scss",
@@ -526,9 +521,7 @@
 		"/Applications/MAMP/htdocs/wpbase/wp-content/plugins/simple-files/simple-files.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/archive.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/tag.php",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_font.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/styleme/style.css",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_wp.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/woocommerce/single-product.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/includes/woo-wpbase.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/header.php",
@@ -537,7 +530,6 @@
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/woocommerce/wpbase/left.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/woocommerce/woo-tags.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_banner.scss",
-		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/scss/_layout.scss",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/plugins/car/car.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/woocommerce/archive-product.php",
 		"/Applications/MAMP/htdocs/wpbase/wp-content/themes/wpbase/sidebar.php",
@@ -759,24 +751,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "scss/_wp.scss",
+					"file": "/Applications/MAMP/htdocs/infuser/wp-content/themes/infuser/infuser.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2347,
+						"buffer_size": 45,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1757,
-								1757
+								0,
+								0
 							]
 						],
 						"settings":
@@ -784,21 +776,26 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -809,26 +806,182 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Applications/MAMP/htdocs/drupal8/sites/default/settings.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20406,
+								20406
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 8474.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scss/_flexmenu.scss",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								79
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -838,7 +991,22 @@
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
 							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
@@ -850,274 +1018,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "menu-main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								226,
-								226
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "scss/_flexmenu.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1938,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								149,
-								162
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "scss/_font.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5153,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								349,
-								349
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
