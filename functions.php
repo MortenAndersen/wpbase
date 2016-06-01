@@ -446,5 +446,3 @@ if (class_exists('WooCommerce')):
 require_once ('includes/woo-wpbase.php');
 endif;
 
-
-

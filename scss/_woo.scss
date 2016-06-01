@@ -648,3 +648,23 @@ $primary: #666;
 			}
 		}
 	}
+	.woocommerce.widget_layered_nav {
+		overflow: hidden;
+		padding: 1em 0;
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			margin: 0;
+			padding: 0 .5em 0 0;
+			list-style-type: none;
+			float: left;
+		}
+		a {
+			padding-right: .1em;
+		}
+		.chosen {
+			font-weight: bold;
+		}
+	}

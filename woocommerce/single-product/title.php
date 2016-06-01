@@ -21,3 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <p itemprop="name" class="product_title entry-title"><?php the_title(); ?></p>
+
+<?php
+global $post, $product;
+
+$cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
+$tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
+
+?>
+
+
+<?php echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', $tag_count, 'woocommerce' ) . ' ', '</span>' ); ?>

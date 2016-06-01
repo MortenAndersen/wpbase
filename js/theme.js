@@ -210,19 +210,15 @@ $(window).scroll(function(){
 
 
 
+// WooCommerce
 
-
- $('#getChkBoxValues').click(function () {
-  var checkedBoxes = $('.tags:checked')
-  if (checkedBoxes.length === 0) {
-    alert('Please select atleast one checkbox!');
-    return;
-  }
-  window.location = "http://localhost:9000/wpbase/tag/" + checkedBoxes.map(function () {
-    return this.value;
-  }).toArray().join('+');
+if(window.location.href.indexOf("?") > -1) {
+	$(".widget_layered_nav strong").append(' <- tilbage').toggleClass('click');
+	$(".widget_layered_nav strong").click(function(event) {
+    event.preventDefault();
+    history.back(1);
 });
-
+}
 
   });
 }(jQuery));
