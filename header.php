@@ -13,6 +13,7 @@
 <body <?php body_class(); ?>>
 
 <header role="banner">
+<?php do_action ( '__pre_header' ); ?>
 <div class="page-wrap page-wrap-top">
 <?php get_template_part( 'menu-top' ); ?>
 <?php dynamic_sidebar( 'headerstackright' ); ?>
@@ -33,3 +34,4 @@
 <?php get_template_part( 'bar' ); ?>
 <?php get_template_part( 'banner' ); ?>
 <div class="page-wrap">
+<?php do_action ( '__after_header' ); ?>

@@ -1,7 +1,5 @@
 .accordion {
 	> h3 {
-		cursor: pointer;
-		outline: none;
 		background-color: #105f79;
 		color: #fff;
 		padding: 1em;
@@ -14,3 +12,11 @@
 		}
 	}
 }
+.js-accordion > h3,
+.js-accordion-active > h3 {
+		cursor: pointer;
+		outline: none;
+	}
+.js-accordion-active > h3.ui-state-active {
+			cursor: inherit;
+		}

@@ -1,9 +1,13 @@
 <?php get_template_part( 'footer-pre' ); ?>
+<?php do_action ( '__pre_footer' ); ?>
 </div>
 <!-- End #main (Wrapper) -->
 
+
 <?php get_sidebar( 'footer' ); ?>
 
+<?php get_template_part( 'call-to-action' ); ?>
+<?php do_action ( '__after_footer' ); ?>
 
 <div class="menu__icon">
 <span class="icon-bar"></span>

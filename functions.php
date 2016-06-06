@@ -112,6 +112,7 @@ function wpbase_widgets_init() {
     register_sidebar(array('name' => __('Info bar', 'wpbase_domain'), 'id' => 'infobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('PRE Footer', 'wpbase_domain'), 'id' => 'footerpre', 'description' => '', 'class' => '', 'before_widget' => '<div class="item prefooter-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Call To Action', 'wpbase_domain'), 'id' => 'calltoaction', 'description' => 'Call To Action slider', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>',));
 }
 add_action('widgets_init', 'wpbase_widgets_init');
 
@@ -445,4 +446,3 @@ endif;
 if (class_exists('WooCommerce')):
 require_once ('includes/woo-wpbase.php');
 endif;
-

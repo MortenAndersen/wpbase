@@ -10,7 +10,7 @@ if (class_exists('acf')): ?>
     endif; ?>
 <?php
     if (have_rows('accordion')): ?>
-<div class="accordion">
+<div class="js-accordion accordion">
 <?php
         while (have_rows('accordion')):
             the_row();

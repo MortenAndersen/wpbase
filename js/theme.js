@@ -172,13 +172,39 @@ if( numberOfImages > 1 ) {
 
 
 // Accordion
-	$(".accordion").accordion({
+	$(".js-accordion").accordion({
     heightStyle: "content",
     icons: false,
     collapsible: true,
     active: false
 
 });
+// Call To Action
+	$(".js-accordion-active").accordion({
+		heightStyle: "content",
+    icons: false,
+	});
+
+	$('.action-but').click(function(){
+		$('.action-container').toggleClass('action-active');
+	});
+
+   $('.home .action-container').toggleClass('action-active');
+
+   var timeoutId = setTimeout(function(){
+            $('.home .action-container').removeClass('action-active');
+    }, 5000);
+
+  $(".action-container").mouseover(function()  {
+  		clearTimeout(timeoutId);
+  });
+
+    $(".action-container").mouseleave(function()  {
+  		setTimeout(function(){
+            $('.action-container').removeClass('action-active');
+    }, 3000);
+  });
+
 
 // Embed
 $(".embedded__content").fitVids();
