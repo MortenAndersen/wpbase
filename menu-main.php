@@ -1,10 +1,10 @@
 <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
-<div class="top__menu__bar">
+<div class="main__menu__bar">
 <?php
 	$main_nav = array(
 		'theme_location' => 'header-menu',
 		'container' =>  '',
-     	'items_wrap'  => '<nav role="navigation" class="flex__menu JS-menu"><ul>'."\n".'%3$s</ul></nav>',
+     	'items_wrap'  => '<nav role="navigation" class="dropdown__menu JS-menu"><ul>'."\n".'%3$s</ul></nav>',
 
 		'sub_menu' => true
 	);

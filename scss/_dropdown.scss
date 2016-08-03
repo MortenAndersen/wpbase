@@ -1,4 +1,4 @@
-nav.drop__down{
+nav.dropdown__menu{
 	padding: 0 1em;
 	&::after {
 		content: "";
@@ -39,23 +39,23 @@ nav.drop__down{
 }
 
 
-nav.drop__down ul li.active,
-nav.drop__down ul li:hover
+nav.dropdown__menu ul li.active,
+nav.dropdown__menu ul li:hover
 {
 	background:rgba(0,0,0,.2);
 }
 
-nav.drop__down li:hover a,
-nav.drop__down .active a {
+nav.dropdown__menu li:hover a,
+nav.dropdown__menu .active a {
 
 }
 
-nav.drop__down li:hover li a,
-nav.drop__down .active li a {
+nav.dropdown__menu li:hover li a,
+nav.dropdown__menu .active li a {
 color: #fff;
 }
 
-nav.drop__down ul ul
+nav.dropdown__menu ul ul
 {
 	display:none;
 	position:absolute;
@@ -72,7 +72,7 @@ nav.drop__down ul ul
 	}
 }
 
-nav.drop__down ul ul li
+nav.dropdown__menu ul ul li
 {
 	float:none;
 	min-width:10em;
@@ -82,7 +82,7 @@ nav.drop__down ul ul li
 	}
 }
 
-nav.drop__down ul ul a
+nav.dropdown__menu ul ul a
 {
 	line-height:120%;
 	padding:10px 15px;
@@ -91,13 +91,13 @@ nav.drop__down ul ul a
 		}
 }
 
-nav.drop__down ul ul ul a {
+nav.dropdown__menu ul ul ul a {
 	@include phone {
 			padding: 1em 0 1em 6em;
 		}
 }
 
-nav.drop__down ul ul ul
+nav.dropdown__menu ul ul ul
 {
 	top:0;
 	left:100%;
@@ -106,7 +106,7 @@ nav.drop__down ul ul ul
 	}
 }
 
-nav.drop__down ul li:hover > ul
+nav.dropdown__menu ul li:hover > ul
 {
 	display:block;
 }

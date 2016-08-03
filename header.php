@@ -15,7 +15,7 @@
 <header role="banner">
 <?php do_action ( '__pre_header' ); ?>
 <div class="page-wrap page-wrap-top">
-<?php get_template_part( 'menu-top' ); ?>
+<?php get_template_part( 'top-bar' ); ?>
 <?php dynamic_sidebar( 'headerstackright' ); ?>
 <?php dynamic_sidebar( 'headerstack' ); ?>
 <?php if ( is_active_sidebar( 'headercontainer' ) ) { ?>

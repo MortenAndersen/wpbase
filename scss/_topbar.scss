@@ -1,0 +1,12 @@
+.top-bar {
+	line-height: 2;
+	justify-content: flex-end;
+}
+.top-bar-item {
+	flex: 0 auto;
+	margin-left: 1em;
+	&.widget_hjemmesiderlogosmall {
+		margin-left: 0;
+		margin-right: auto;
+	}
+}

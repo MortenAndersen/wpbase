@@ -100,7 +100,7 @@ function wpbase_scripts() {
 add_action('wp_enqueue_scripts', 'wpbase_scripts');
 
 function wpbase_widgets_init() {
-
+     register_sidebar(array('name' => __('Topbar', 'wpbase_domain'), 'id' => 'topbar', 'description' => '', 'class' => '', 'before_widget' => '<div class="top-bar-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Header Stack Right', 'wpbase_domain'), 'id' => 'headerstackright', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack content__right %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Header Stack', 'wpbase_domain'), 'id' => 'headerstack', 'description' => '', 'class' => '', 'before_widget' => '<div class="stack %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Header Container', 'wpbase_domain'), 'id' => 'headercontainer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
@@ -329,7 +329,7 @@ class hjemmesider_logo_widget extends WP_Widget
          // Base ID
         __('Logo', 'wpbase_domain'),
          // Name
-        array('description' => __('Hjemmesider.dk - Logo, Sidetitel og Tagline ', 'wpbase_domain'),)
+        array('description' => __('Logo med Sidetitel og Tagline ', 'wpbase_domain'),)
          // Args
         );
     }
@@ -342,7 +342,7 @@ class hjemmesider_logo_widget extends WP_Widget
      */
     public function widget($args, $instance) {
         echo $args['before_widget'];
-        get_template_part('logo');
+        get_template_part('widgets/logo');
         echo $args['after_widget'];
     }
 }
@@ -362,7 +362,7 @@ class hjemmesider_logo_small_widget extends WP_Widget
          // Base ID
         __('Logo clean', 'wpbase_domain'),
          // Name
-        array('description' => __('Hjemmesider.dk - Logo', 'wpbase_domain'),)
+        array('description' => __('Logo (enkelt)', 'wpbase_domain'),)
          // Args
         );
     }
@@ -375,13 +375,48 @@ class hjemmesider_logo_small_widget extends WP_Widget
      */
     public function widget($args, $instance) {
         echo $args['before_widget'];
-        get_template_part('logo-clean');
+        get_template_part('widgets/logo-clean');
         echo $args['after_widget'];
     }
 }
 
 add_action('widgets_init', function () {
     register_widget('hjemmesider_logo_small_widget');
+});
+
+/* --------------------- Print icon Widget ----------------------------------------- */
+
+class hjemmesider_print_widget extends WP_Widget
+{
+
+    /**
+     * Sets up the widgets name etc
+     */
+    public function __construct() {
+        parent::__construct('printicon',
+         // Base ID
+        __('Print Icon', 'wpbase_domain'),
+         // Name
+        array('description' => __('Print ikon ', 'wpbase_domain'),)
+         // Args
+        );
+    }
+
+    /**
+     * Outputs the content of the widget
+     *
+     * @param array $args
+     * @param array $instance
+     */
+    public function widget($args, $instance) {
+        echo $args['before_widget'];
+        get_template_part('widgets/printicon');
+        echo $args['after_widget'];
+    }
+}
+
+add_action('widgets_init', function () {
+    register_widget('hjemmesider_print_widget');
 });
 
 /* --------------------- Loginform Widget ----------------------------------------- */
@@ -397,7 +432,7 @@ class hjemmesider_loginform_widget extends WP_Widget
          // Base ID
         __('Loginform', 'wpbase_domain'),
          // Name
-        array('description' => __('Hjemmesider.dk - Loginform', 'wpbase_domain'),)
+        array('description' => __('Loginform', 'wpbase_domain'),)
          // Args
         );
     }
@@ -410,7 +445,7 @@ class hjemmesider_loginform_widget extends WP_Widget
      */
     public function widget($args, $instance) {
         echo $args['before_widget'];
-        get_template_part('user/login-form');
+        get_template_part('widgets/login-form');
         echo $args['after_widget'];
     }
 }

@@ -1,0 +1,144 @@
+$color0: #000;
+$afstand: 1em;
+
+#slides {
+    position: relative;
+    max-height: 500px;
+    @include tablet-width {
+        max-height: 300px;
+    }
+}
+
+#slides .slides-container {
+    display: none;
+}
+
+#slides .scrollable {
+    *zoom: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+#slides .scrollable:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.slides-navigation {
+    margin: 0 auto;
+    position: absolute;
+    z-index: 3;
+    top: 46%;
+    width: 100%;
+}
+
+.slides-navigation a {
+    position: absolute;
+    display: block;
+}
+
+.slides-navigation a.prev {
+    left: 0;
+}
+
+.slides-navigation a.next {
+    right: 0;
+}
+
+.slides-pagination {
+    position: absolute;
+    z-index: 3;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.slides-pagination a {
+    border: 2px solid $color0;
+    border-radius: 15px;
+    width: 12px;
+    height: 12px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+    margin: 2px;
+    overflow: hidden;
+    text-indent: -100%;
+}
+
+.slides-pagination a.current {
+    background: $color0;
+}
+
+#slides li {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__text {
+    max-width: 1200px;
+    padding: 0 $afstand;
+    margin: 9em auto 0 auto;
+    animation: fadein 4s;
+    a {
+        text-decoration: none;
+        color: #fff;
+        background: $menu-bg;
+        padding: .5em 1em;
+        margin: 1em 0 0 0;
+        float: left;
+        transition: .5s all;
+        animation: blink 4s;
+        &:hover {
+            border-radius: .5em;
+        }
+    }
+    @include tablet-width {
+        margin-top: 1em;
+    }
+}
+
+.banner__text_content {
+    max-width: 500px;
+    padding: 1em;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    font-size: 1.5em;
+    @include tablet-width {
+        font-size: 1.2em;
+    }
+    h4 {
+        margin: 0;
+        color: inherit;
+    }
+}
+
+
+
+@keyframes fadein {
+    from {
+        transform: translateY(500px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

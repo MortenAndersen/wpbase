@@ -63,7 +63,7 @@
     h3 {
         page-break-after: avoid;
     }
-    nav, header, aside, footer {
+    nav, body > header, aside, footer, .print, .menu__icon, .woocommerce-ordering, .woo__archive_widget, .thumbnails {
         display: none;
     }
     article {
