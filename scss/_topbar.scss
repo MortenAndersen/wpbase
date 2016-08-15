@@ -9,4 +9,14 @@
 		margin-left: 0;
 		margin-right: auto;
 	}
+	@include phone {
+		float: left;
+		width: 100%;
+		margin: 0 0 .5em 0;
+	}
+}
+.top-bar.flex {
+	@include phone {
+		display: block;
+	}
 }

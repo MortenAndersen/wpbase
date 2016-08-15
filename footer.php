@@ -1,4 +1,9 @@
 <?php get_template_part( 'footer-pre' ); ?>
+<?php if ( is_active_sidebar( 'footericon')) { ?>
+<div class="footer-icon">
+<?php dynamic_sidebar( 'footericon' ); ?>
+</div>
+<?php } ?>
 <?php do_action ( '__pre_footer' ); ?>
 </div>
 <!-- End #main (Wrapper) -->

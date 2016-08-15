@@ -111,6 +111,7 @@ function wpbase_widgets_init() {
     register_sidebar(array('name' => __('Banner inside', 'wpbase_domain'), 'id' => 'bannerinside', 'description' => 'Banner i sidens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Info bar', 'wpbase_domain'), 'id' => 'infobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('PRE Footer', 'wpbase_domain'), 'id' => 'footerpre', 'description' => '', 'class' => '', 'before_widget' => '<div class="item prefooter-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Footer icon', 'wpbase_domain'), 'id' => 'footericon', 'description' => 'Ikoner i sidefoden', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Call To Action', 'wpbase_domain'), 'id' => 'calltoaction', 'description' => 'Call To Action slider', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>',));
 }
@@ -316,143 +317,6 @@ add_action('widgets_init', function () {
     register_widget('hjemmesider_social_widget');
 });
 
-/* --------------------- 2 LOGO Widget ----------------------------------------- */
-
-class hjemmesider_logo_widget extends WP_Widget
-{
-
-    /**
-     * Sets up the widgets name etc
-     */
-    public function __construct() {
-        parent::__construct('hjemmesiderlogo',
-         // Base ID
-        __('Logo', 'wpbase_domain'),
-         // Name
-        array('description' => __('Logo med Sidetitel og Tagline ', 'wpbase_domain'),)
-         // Args
-        );
-    }
-
-    /**
-     * Outputs the content of the widget
-     *
-     * @param array $args
-     * @param array $instance
-     */
-    public function widget($args, $instance) {
-        echo $args['before_widget'];
-        get_template_part('widgets/logo');
-        echo $args['after_widget'];
-    }
-}
-
-add_action('widgets_init', function () {
-    register_widget('hjemmesider_logo_widget');
-});
-
-class hjemmesider_logo_small_widget extends WP_Widget
-{
-
-    /**
-     * Sets up the widgets name etc
-     */
-    public function __construct() {
-        parent::__construct('hjemmesiderlogosmall',
-         // Base ID
-        __('Logo clean', 'wpbase_domain'),
-         // Name
-        array('description' => __('Logo (enkelt)', 'wpbase_domain'),)
-         // Args
-        );
-    }
-
-    /**
-     * Outputs the content of the widget
-     *
-     * @param array $args
-     * @param array $instance
-     */
-    public function widget($args, $instance) {
-        echo $args['before_widget'];
-        get_template_part('widgets/logo-clean');
-        echo $args['after_widget'];
-    }
-}
-
-add_action('widgets_init', function () {
-    register_widget('hjemmesider_logo_small_widget');
-});
-
-/* --------------------- Print icon Widget ----------------------------------------- */
-
-class hjemmesider_print_widget extends WP_Widget
-{
-
-    /**
-     * Sets up the widgets name etc
-     */
-    public function __construct() {
-        parent::__construct('printicon',
-         // Base ID
-        __('Print Icon', 'wpbase_domain'),
-         // Name
-        array('description' => __('Print ikon ', 'wpbase_domain'),)
-         // Args
-        );
-    }
-
-    /**
-     * Outputs the content of the widget
-     *
-     * @param array $args
-     * @param array $instance
-     */
-    public function widget($args, $instance) {
-        echo $args['before_widget'];
-        get_template_part('widgets/printicon');
-        echo $args['after_widget'];
-    }
-}
-
-add_action('widgets_init', function () {
-    register_widget('hjemmesider_print_widget');
-});
-
-/* --------------------- Loginform Widget ----------------------------------------- */
-
-class hjemmesider_loginform_widget extends WP_Widget
-{
-
-    /**
-     * Sets up the widgets name etc
-     */
-    public function __construct() {
-        parent::__construct('hjemmesiderloginform',
-         // Base ID
-        __('Loginform', 'wpbase_domain'),
-         // Name
-        array('description' => __('Loginform', 'wpbase_domain'),)
-         // Args
-        );
-    }
-
-    /**
-     * Outputs the content of the widget
-     *
-     * @param array $args
-     * @param array $instance
-     */
-    public function widget($args, $instance) {
-        echo $args['before_widget'];
-        get_template_part('widgets/login-form');
-        echo $args['after_widget'];
-    }
-}
-
-add_action('widgets_init', function () {
-    register_widget('hjemmesider_loginform_widget');
-});
 
 /* ---------------------- Search form - FILEARCHIVE ------------------------------------------------- */
 
@@ -481,3 +345,15 @@ endif;
 if (class_exists('WooCommerce')):
 require_once ('includes/woo-wpbase.php');
 endif;
+
+/* --------------------- Print icon Widget ----------------------------------------- */
+require_once ('includes/print.php');
+
+/* --------------------- Back icon Widget ----------------------------------------- */
+require_once ('includes/back.php');
+
+/* --------------------- Loginform Widget ----------------------------------------- */
+require_once ('includes/login-form.php');
+
+/* --------------------- 2 LOGO Widget ----------------------------------------- */
+require_once ('includes/logo.php');

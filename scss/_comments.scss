@@ -22,3 +22,20 @@
 		color: #105f79;
 	}
 }
+.commentlist {
+	border-top: $border;
+	li {
+		padding: 1em 0;
+		border-bottom: 1px solid #ddd;
+		overflow: hidden;
+		margin-bottom: 1em;
+		&:last-child {
+			border: none;
+			margin-bottom: 0;
+		}
+		> ul {
+			width: 100%;
+			float: left;
+		}
+	}
+}

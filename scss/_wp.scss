@@ -17,6 +17,12 @@
 
 .bypostauthor {
     font-weight: bold;
+    .bypostauthor.byuser {
+        font-weight: bold;
+    }
+    .byuser {
+        font-weight: normal;
+    }
 }
 
 .alignright {
@@ -64,7 +70,6 @@
 #respond {
     clear: both;
     border-top: $border;
-    border-bottom: $border;
 }
 
 #commentform {
