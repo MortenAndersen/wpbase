@@ -5,14 +5,34 @@
 .top-bar-item {
 	flex: 0 auto;
 	margin-left: 1em;
-	&.widget_hjemmesiderlogosmall {
+	&.widget_wpbase_logo,
+	&.widget_wpbase_logo_clean {
 		margin-left: 0;
 		margin-right: auto;
+		p {
+			@include phone {
+				display: none;
+			}
+		}
 	}
 	@include phone {
 		float: left;
 		width: 100%;
 		margin: 0 0 .5em 0;
+	}
+	&.widget_nav_menu {
+		li a {
+			&:after {
+				content: ' |';
+				display: inline;
+				margin-right: 3px;
+			}
+		}
+		li:last-child a {
+			&:after{
+				display: none;
+			}
+		}
 	}
 }
 .top-bar.flex {

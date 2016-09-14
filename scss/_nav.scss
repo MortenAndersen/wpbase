@@ -1,6 +1,10 @@
 .main__menu__bar {
 	width: 100%;
-	background-color: $menu-bg;
+	background-color: $main-color;
+	background-image: radial-gradient(
+        transparent,
+        hsla(0, 100%, 0%, 0.15)
+    );
 	clear: both;
 	nav {
 		@extend .page-width;

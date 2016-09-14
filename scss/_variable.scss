@@ -1,5 +1,5 @@
 $phone-width: 667px;
-$tablet-width: 768px;
+$tablet-vertical: 768px;
 $desktop-width: 1024px;
 @mixin phone {
     @media (max-width: #{$phone-width}) {
@@ -13,8 +13,8 @@ $desktop-width: 1024px;
     }
 }
 
-@mixin tablet-width {
-    @media (max-width: #{$desktop-width}) {
+@mixin tablet-vertical {
+    @media (max-width: #{$tablet-vertical}) {
         @content;
     }
 }
@@ -33,6 +33,7 @@ $body-txt-color: #444;
 $link-color: rgba(0, 0, 0, .9);
 
 /* Menu */
+$main-color: rgb(16, 95, 121);
 $menu-bg: rgb(16, 95, 121);
 $main-menu-bg-color: rgba(0, 0, 0, .9);
 $main-menu-link-color: #000;

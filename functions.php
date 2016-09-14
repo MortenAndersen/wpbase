@@ -6,7 +6,7 @@ function custom_wp_nav_menu($var) {
     return is_array($var) ? array_intersect($var, array(
 
     //List of allowed menu classes
-    'current_page_item', 'current_page_parent', 'current_page_ancestor', 'first', 'last', 'vertical', 'horizontal', 'menu-item-has-children', 'current-menu-item')) : '';
+    'current_page_item', 'current_page_parent', 'current_page_ancestor', 'current-product-ancestor', 'current-product_cat-ancestor', 'first', 'last', 'vertical', 'horizontal', 'menu-item-has-children', 'current-menu-item')) : '';
 }
 add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
 add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
@@ -93,7 +93,7 @@ add_action('wp_enqueue_scripts', 'wpbase_footer_enqueue_scripts');
 
 function wpbase_scripts() {
 
-    wp_register_script('theme-script', get_template_directory_uri() . '/js/theme.js', array('jquery'));
+    wp_register_script('theme-script', get_template_directory_uri() . '/js/theme.js', array('jquery', 'jquery-masonry'));
     wp_enqueue_script('theme-script');
 }
 

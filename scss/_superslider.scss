@@ -4,7 +4,10 @@ $afstand: 1em;
 #slides {
     position: relative;
     max-height: 500px;
-    @include tablet-width {
+    @include tablet {
+        max-height: 300px;
+    }
+    .banner-wrap & {
         max-height: 300px;
     }
 }
@@ -90,10 +93,18 @@ $afstand: 1em;
     padding: 0 $afstand;
     margin: 9em auto 0 auto;
     animation: fadein 4s;
+    .banner-wrap & {
+        margin: 1em 0 0 0;
+        width: auto;
+    }
     a {
         text-decoration: none;
         color: #fff;
-        background: $menu-bg;
+        background-color: $main-color;
+        background-image: radial-gradient(
+        transparent,
+        hsla(0, 100%, 0%, 0.15)
+        );
         padding: .5em 1em;
         margin: 1em 0 0 0;
         float: left;
@@ -103,7 +114,7 @@ $afstand: 1em;
             border-radius: .5em;
         }
     }
-    @include tablet-width {
+    @include tablet {
         margin-top: 1em;
     }
 }
@@ -114,12 +125,17 @@ $afstand: 1em;
     background: rgba(0, 0, 0, .4);
     color: #fff;
     font-size: 1.5em;
-    @include tablet-width {
+    @include tablet {
         font-size: 1.2em;
     }
     h4 {
         margin: 0;
         color: inherit;
+    }
+    p{
+        &:last-of-type {
+            margin: 0;
+        }
     }
 }
 

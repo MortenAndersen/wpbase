@@ -22,8 +22,16 @@ nav.dropdown__menu{
 		position: relative;
 		float: left;
 		transition: .3s all;
+		border-right: 1px solid rgba(255,255,255,.15);
+		&:last-child {
+			border: none;
+		}
+		li {
+			border-right: none;
+		}
 		@include phone {
 			float: none;
+			border-right: none;
 		}
 	}
 	a {
@@ -31,6 +39,12 @@ nav.dropdown__menu{
 		display:block;
 		padding: 1em 2em;
 		color: #fff;
+		@include tablet {
+			padding: 1em;
+		}
+		@include tablet-vertical {
+			padding: 1em .5em;
+		}
 		@include phone {
 			border-bottom: 1px solid rgba(255,255,255,.7);
 			background-image: linear-gradient(transparent, rgba(0,0,0,.2));
@@ -40,6 +54,8 @@ nav.dropdown__menu{
 
 
 nav.dropdown__menu ul li.active,
+nav.dropdown__menu ul li.current-product-ancestor,
+nav.dropdown__menu ul li.current-product_cat-ancestor,
 nav.dropdown__menu ul li:hover
 {
 	background:rgba(0,0,0,.2);

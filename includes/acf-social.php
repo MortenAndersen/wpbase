@@ -3,10 +3,12 @@
 /* ---------------------- ACF Social felter ------------------------------------------------- */
 
 if (function_exists('acf_add_options_page')) {
+    if ( current_user_can( 'administrator' ) ) {
 
     acf_add_options_page(array('page_title' => 'Theme General Settings', 'menu_title' => 'WPbase admin', 'menu_slug' => 'wpbase-general-settings', 'capability' => 'edit_posts', 'redirect' => false));
 
     acf_add_options_sub_page(array('page_title' => 'Theme Social Settings', 'menu_title' => 'Social', 'parent_slug' => 'wpbase-general-settings',));
+}
 }
 if( function_exists('acf_add_local_field_group') ):
 
@@ -208,3 +210,35 @@ add_action( 'widgets_init', function(){
 });
 
 }
+
+
+// Socialelinks Shortcode
+
+add_shortcode('sociallinks', 'hjemmesider_social_links');
+function hjemmesider_social_links($atts) {
+    global $post;
+    ob_start(); ?>
+
+    <ul class="acf__social">
+<?php if( get_field( 'facebook_url', 'option' ) ): ?>
+<li><a class="facebook__link" href="<?php the_field( 'facebook_url', 'options' ); ?>" target="_blank">Facebook</a></li>
+<?php endif; ?>
+<?php if( get_field( 'twitter_url', 'option' ) ): ?>
+<li><a class="twitter__link" href="<?php the_field( 'twitter_url', 'options' ); ?>" target="_blank">Twitter</a></li>
+<?php endif; ?>
+<?php if( get_field( 'instagram_url', 'option' ) ): ?>
+<li><a class="instagram__link" href="<?php the_field( 'instagram_url', 'options' ); ?>" target="_blank">Instagram</a></li>
+<?php endif; ?>
+<?php if( get_field( 'google_plus_url', 'option' ) ): ?>
+<li><a class="google-plus__link" href="<?php the_field( 'google_plus_url', 'options' ); ?>" target="_blank">Google +</a></li>
+<?php endif; ?>
+<?php if( get_field( 'linkedin_url', 'option' ) ): ?>
+<li><a class="linkedin__link" href="<?php the_field( 'linkedin_url', 'options' ); ?>" target="_blank">Linkedin</a></li>
+<?php endif; ?>
+</ul>
+
+    <?php
+        $myvariable = ob_get_clean();
+        return $myvariable;
+    }
+

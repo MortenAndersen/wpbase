@@ -233,7 +233,12 @@ $(window).scroll(function(){
 		return false;
 	});
 
-
+// masonry
+	$('.masonry-grid').masonry({
+  columnWidth: '.post',
+  itemSelector: '.post',
+  percentPosition: true
+});
 
 // WooCommerce
 
@@ -245,6 +250,6 @@ if(window.location.href.indexOf("?") > -1) {
 });
 }
 
+
   });
 }(jQuery));
-

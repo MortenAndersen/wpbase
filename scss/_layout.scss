@@ -33,7 +33,8 @@ body {
             display: block;
         }
         img {
-            @include phone {
+            float: left;
+            @include tablet {
             max-width: 75%
         }
         }
@@ -75,6 +76,10 @@ body > header {
     padding: 1em;
     overflow: hidden;
     &.page-wrap-top {
+        @include tablet {
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
     }
     &.page-wrap-bar {
         background: transparent;
@@ -99,7 +104,6 @@ body > header {
 article {
     width: 100%;
     float: left;
-    overflow: hidden;
     .page-template-page-aside & {
         width: 100% - $aside-first - $aside-last;
     }
@@ -108,9 +112,7 @@ article {
         width: 100% - $aside-first;
     }
     .page-template-page-aside-right &,
-    .single &,
-    .archive &,
-    .blog & {
+    .single & {
         width: 100% - $aside-last;
     }
     &.product_archive_big,
@@ -189,7 +191,11 @@ aside > section {
 body > footer {
     clear: both;
     overflow: hidden;
-    background: #083342;
+    background-color: $main-color;
+    background-image: radial-gradient(
+        transparent,
+        hsla(0, 100%, 0%, 0.2)
+    );
     color: #fff;
     padding: 2em 0;
     font-size: .9em;
@@ -241,14 +247,23 @@ body > footer {
         }
         footer & {
             padding: 0;
-            margin-right: 2em;
+            margin-right: 1em;
+            margin-left: 1em;
+            @include tablet-vertical {
+                margin-right: .5em;
+                margin-left: .5em;
+            }
             @include phone {
                 margin-right: 0;
+                margin-left: 0;
                 padding: 0 0 2em 0;
             }
             &:last-child {
                 margin-right: 0;
             }
+        }
+        .textwidget & {
+            margin-right: .25em;
         }
         @include phone {
             padding: 0 0 1em 0;

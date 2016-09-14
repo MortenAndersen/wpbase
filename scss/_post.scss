@@ -11,3 +11,19 @@
     	}
     }
 }
+ul.blog-info {
+    font-size: 80%;
+    margin-bottom: 1em;
+    line-height: 1.2;
+    .type {
+        opacity: .7;
+    }
+    .result {
+        font-style: italic;
+    }
+    .forfatter {
+        .result {
+        font-weight: bold;
+    }
+    }
+}

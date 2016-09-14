@@ -85,20 +85,21 @@ button[type=submit],
     margin: 1em 0;
 }
 
-button[type="submit"]:disabled {
-    opacity: .2;
+button[type="submit"].disabled {
+    opacity: .5;
+    cursor: inherit;
 }
 
 .reset_variations {
     display: none !important;
 }
-
+/*
 td.value {
     select {
         width: 100%;
     }
 }
-
+*/
 .product {
     position: relative;
 }
@@ -321,8 +322,16 @@ aside .product_list_widget.cart_list li {
 .images {
     float: left;
     width: 65%;
+    background: rgba(0, 0, 0, .035);
+    border: 1px solid #ddd;
+    padding: .5em;
     img {
         border: 1px solid rgba(0, 0, 0, .1);
+        float: left;
+    }
+    .thumbnails {
+        clear: both;
+        padding-top: 1em;
     }
     @include phone {
         width: 100%;
@@ -429,17 +438,34 @@ aside .product_list_widget.cart_list li {
     padding: 2em;
 }
 
-#customer_details,
-#order_review {
+#customer_details{
     float: left;
-    width: 50%;
-    padding-right: 10%;
+    width: 53%;
+    padding-right: 3%;
     @include phone {
         width: 100%;
         padding: 0;
     }
 }
 
+#order_review {
+    float: left;
+    width: 47%;
+    padding-top: 3.7em;
+    @include phone {
+        width: 100%;
+        padding: 0;
+    }
+}
+.woocommerce-billing-fields {
+    h3 {
+        margin: 0;
+        height: 2em;
+    }
+}
+h3#order_review_heading {
+    display: none;
+}
 .shop__h1 {
     margin: 0;
 }
@@ -499,6 +525,7 @@ aside .product_list_widget.cart_list li {
 
 .showcoupon {
     display: block;
+    padding-bottom: 1em;
 }
 
 .checkout_coupon {

@@ -6,7 +6,7 @@ class hjemmesider_logo_widget extends WP_Widget
      * Sets up the widgets name etc
      */
     public function __construct() {
-        parent::__construct('hjemmesiderlogo',
+        parent::__construct('wpbase_logo',
          // Base ID
         __('Logo', 'wpbase_domain'),
          // Name
@@ -39,7 +39,7 @@ class hjemmesider_logo_small_widget extends WP_Widget
      * Sets up the widgets name etc
      */
     public function __construct() {
-        parent::__construct('hjemmesiderlogosmall',
+        parent::__construct('wpbase_logo_clean',
          // Base ID
         __('Logo clean', 'wpbase_domain'),
          // Name

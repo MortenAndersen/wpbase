@@ -1,0 +1,38 @@
+.masonry-grid {
+    width: 103.125%;
+    overflow: hidden;
+    margin-left: -1.562%;
+    margin-bottom: -1.875em;
+    .post {
+        width: 30.303%;
+        float: left;
+        margin: 0 1.515% 1.875em;
+        padding: 0;
+            @include phone {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        img {
+            width: 100%;
+            margin: 0 0 .75em 0;
+        }
+    }
+    h2 {
+        margin: 0 0 .5em 0;
+        padding-bottom: .25em;
+        font-size: 1.2em;
+        line-height: 1.1;
+        border-bottom: 1px solid currentColor;
+        a {
+            text-decoration: none;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+    @include phone {
+        width: 100%;
+        margin-left: 0;
+    }
+}
