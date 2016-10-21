@@ -152,14 +152,14 @@ $('.js-toggle-target1').slideToggle();
 $(".gallery a:has(> img)").attr('data-lightbox', 'image-gallery');
 
 /* Img in content class ligthb */
-$("a.lightb, .googpicwrap a").attr('data-lightbox', 'image-content');
+$("a.lightb, a.colorboxgalleryimage").attr('data-lightbox', 'image-content');
 
 $( "#accordion" ).accordion({
       heightStyle: "content"
     });
 // Banner
 
-$('#slides').superslides({
+$('.slides').superslides({
     play: 10000,
     animation: 'fade',
     animation_speed: 600,
@@ -249,6 +249,15 @@ if(window.location.href.indexOf("?") > -1) {
     history.back(1);
 });
 }
+
+
+
+
+
+
+
+
+
 
 
   });

@@ -1,5 +1,5 @@
 <?php get_template_part( 'footer-pre' ); ?>
-<?php if ( is_active_sidebar( 'footericon')) { ?>
+<?php if ( is_active_sidebar( 'footericon') && ( !is_cart() && ( !is_checkout()) && ( !is_account_page() ) )) { ?>
 <div class="footer-icon">
 <?php dynamic_sidebar( 'footericon' ); ?>
 </div>

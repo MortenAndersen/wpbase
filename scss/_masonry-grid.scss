@@ -3,15 +3,19 @@
     overflow: hidden;
     margin-left: -1.562%;
     margin-bottom: -1.875em;
+    padding-top: 2em;
     .post {
         width: 30.303%;
         float: left;
-        margin: 0 1.515% 1.875em;
-        padding: 0;
+        margin: 0 1.515% 2em;
+        padding: 1em 0 0 0;
+        border-top: 8px solid rgba(0,0,0,0.05);
+        border-bottom: 3px solid rgba(0,0,0,0.05);
             @include phone {
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
+                margin-bottom: 1em;
             }
         img {
             width: 100%;
@@ -23,7 +27,6 @@
         padding-bottom: .25em;
         font-size: 1.2em;
         line-height: 1.1;
-        border-bottom: 1px solid currentColor;
         a {
             text-decoration: none;
             &:hover {

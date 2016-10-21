@@ -76,8 +76,7 @@
     max-width: 30em;
 }
 
-section,
-.item {
+section {
     float: left;
     width: 100%;
     padding-bottom: 2em;
@@ -150,4 +149,19 @@ section,
         background-color: inherit;
         border-color: rgba(0,0,0,.4);
     }
+}
+.widget {
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+        li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+    }
+}
+article .item > ul {
+    padding-left: 1.5em;
 }

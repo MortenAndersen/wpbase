@@ -9,20 +9,6 @@ body {
     color: $body-txt-color;
 }
 
-
-/*
- * Logo & Description
- */
-/*
-.site {
-    padding: 1em 1em;
-    background: #fff;
-    overflow: hidden;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-}
-*/
-
 .logo-widget > * {
     vertical-align: middle;
 }
@@ -35,7 +21,7 @@ body {
         img {
             float: left;
             @include tablet {
-            max-width: 75%
+            max-width: 75%;
         }
         }
 }
@@ -46,8 +32,10 @@ body {
  */
 
 body > header {
-
     clear: both;
+    overflow: hidden;
+    position: relative;
+
     @include phone {
         background: rgba(0,0,0,0.1);
         width: 100%;

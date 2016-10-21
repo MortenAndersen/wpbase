@@ -7,7 +7,7 @@ dynamic_sidebar('banner'); ?>
 
 <?php if ( is_active_sidebar( 'bannerinside') ) { ?>
 <div class="page-wrap banner-wrap">
-<section class="banner__content">
+<section class="banner__content inner-banner">
 <?php
 dynamic_sidebar('bannerinside'); ?>
 </section>

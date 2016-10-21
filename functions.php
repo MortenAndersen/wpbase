@@ -111,8 +111,8 @@ function wpbase_widgets_init() {
     register_sidebar(array('name' => __('Banner inside', 'wpbase_domain'), 'id' => 'bannerinside', 'description' => 'Banner i sidens bredde', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Info bar', 'wpbase_domain'), 'id' => 'infobar', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('PRE Footer', 'wpbase_domain'), 'id' => 'footerpre', 'description' => '', 'class' => '', 'before_widget' => '<div class="item prefooter-design-item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Footer icon', 'wpbase_domain'), 'id' => 'footericon', 'description' => 'Ikoner i sidefoden', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
-    register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Footer icon', 'wpbase_domain'), 'id' => 'footericon', 'description' => 'Ikoner i sidefoden - vises IKKE på WooCommerce checkoutsider!', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h4>', 'after_title' => '</h4>',));
+    register_sidebar(array('name' => __('Footer', 'wpbase_domain'), 'id' => 'footer', 'description' => '', 'class' => '', 'before_widget' => '<div class="item widget %2$s">', 'after_widget' => '</div>', 'before_title' => '<h4>', 'after_title' => '</h4>',));
     register_sidebar(array('name' => __('Call To Action', 'wpbase_domain'), 'id' => 'calltoaction', 'description' => 'Call To Action slider', 'class' => '', 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>',));
 }
 add_action('widgets_init', 'wpbase_widgets_init');
@@ -316,24 +316,6 @@ class hjemmesider_social_widget extends WP_Widget
 add_action('widgets_init', function () {
     register_widget('hjemmesider_social_widget');
 });
-
-
-/* ---------------------- Search form - FILEARCHIVE ------------------------------------------------- */
-
-function hjemmesider_files_earch( $form ) {
-
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <div><label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
-    <input type="text" placeholder="Søg i filarkivet" value="' . get_search_query() . '" name="s" id="s" />
-    <input type="hidden" name="post_type" value="filarkiv" />
-    <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-    </div>
-    </form>';
-
-    return $form;
-}
-
-add_shortcode('filesearch', 'hjemmesider_files_earch');
 
 
 /* ---------------------- ACF Theme Admin ------------------------------------------------- */

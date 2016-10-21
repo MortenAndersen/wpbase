@@ -25,6 +25,14 @@ h2 {
 
 h3 {
     font-size: 1.2em;
+    &#ship-to-different-address {
+        font-weight: inherit;
+        font-size: inherit;
+        font-style: italic;
+        input {
+            margin-left: .5em;
+        }
+    }
 }
 p ~ h3,
 ul ~ h3,
@@ -326,6 +334,11 @@ figcaption {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+.back {
+    .home & {
+        display: none;
     }
 }
 .back a {

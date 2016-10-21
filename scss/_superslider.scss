@@ -1,7 +1,12 @@
 $color0: #000;
 $afstand: 1em;
-
-#slides {
+section.banner__content {
+    padding-bottom: 0;
+    &.inner-banner {
+        margin-top: 1em;
+    }
+}
+.slides {
     position: relative;
     max-height: 500px;
     @include tablet {
@@ -12,11 +17,11 @@ $afstand: 1em;
     }
 }
 
-#slides .slides-container {
+.slides .slides-container {
     display: none;
 }
 
-#slides .scrollable {
+.slides .scrollable {
     *zoom: 1;
     position: relative;
     top: 0;
@@ -26,7 +31,7 @@ $afstand: 1em;
     height: 100%;
 }
 
-#slides .scrollable:after {
+.slides .scrollable:after {
     content: "";
     display: table;
     clear: both;
@@ -82,7 +87,7 @@ $afstand: 1em;
     background: $color0;
 }
 
-#slides li {
+.slides li {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
