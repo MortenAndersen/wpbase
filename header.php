@@ -7,7 +7,12 @@
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" />
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600' rel='stylesheet' type='text/css'>
+<script>
+  document.body.onload = function() {
+    var url = 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600';
+    loadFont(url);
+  }
+</script>
 </head>
 
 <body <?php body_class(); ?>>
