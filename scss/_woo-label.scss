@@ -1,0 +1,26 @@
+.produkt-label {
+    font-size: .85em;
+    font-weight: bold;
+    padding: .5em;
+    display: block;
+    margin-bottom: .5em;
+    &.label-color-1 {
+        padding: 0;
+    }
+    &.label-color-2 {
+        background: linear-gradient(45deg, #38b721, #227110);
+        color: #fff;
+    }
+    &.label-color-3 {
+        background: linear-gradient(45deg, #f90808, #921010);
+        color: #fff;
+    }
+    &.label-color-4 {
+        background: linear-gradient(45deg, #07aeef, #106892);
+        color: #fff;
+    }
+    &.label-color-5 {
+        background: linear-gradient(45deg, #d0ae06, #a95804);
+        color: #fff;
+    }
+}

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <p itemprop="name" class="product_title entry-title"><?php the_title(); ?></p>
-
+<?php get_template_part( '/woocommerce/wpbase/produkt-label' ); ?>
 <?php
 global $post, $product;
 

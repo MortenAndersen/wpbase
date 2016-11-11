@@ -121,7 +121,7 @@ section {
     clear: both;
 }
 
-.page-numbers {
+span.page-numbers, a.page-numbers {
     padding: .25em .5em;
     border: 1px solid rgba(0, 0, 0, .05);
     float: left;
